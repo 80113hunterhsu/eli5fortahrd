@@ -18,6 +18,9 @@
 	<!-- Custom CSS -->
 	<link href="css/stylish-portfolio.min.css" rel="stylesheet">
 	<link href="css/customDefined.css" rel="stylesheet">
+    
+    <!-- Custom JS-->
+    <script src="js/tagSwitcher.js"></script>
 	
 	<!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7YSTZYM63V"></script>
@@ -80,11 +83,11 @@
 			<h3 class="mb-5">
 				<em>懶人包在手，便知有沒有</em>
 			</h3>
-            <div id="tagBtnGroup">
-			    <a class="btn btn-primary btn-xl js-scroll-trigger" href="#allContents">所有分類</a>
-                <a class="btn btn-primary btn-xl js-scroll-trigger" href="#allContents">學習與科技組</a>
-                <a class="btn btn-primary btn-xl js-scroll-trigger" href="#allContents">設計與科技組</a>
-                <a class="btn btn-primary btn-xl js-scroll-trigger" href="#allContents">資工系雙主修</a>
+            <div id="tagBtnGroup">  <!--caller(callOn, callOff)-->
+			    <a class="btn btn-primary btn-xl js-scroll-trigger" href="#allContents" onClick="getTag(1)">所有分類</a>
+                <a class="btn btn-primary btn-xl js-scroll-trigger" href="#allContents" onClick="getTag(2)">學習與科技組</a>
+                <a class="btn btn-primary btn-xl js-scroll-trigger" href="#allContents" onClick="getTag(3)">設計與科技組</a>
+                <a class="btn btn-primary btn-xl js-scroll-trigger" href="#allContents" onClick="getTag(4)">資工系雙主修</a>
             </div>
 		</div>
 		<div class="overlay"></div>
@@ -95,7 +98,7 @@
 		<div class="container">
 			<div class="content-section-heading text-center">
 				<h3 class="text-secondary mb-0">擇你所愛，愛你所選</h3>
-				<h2 class="mb-5 index_title">所有分類</h2>
+				<h2 class="mb-5" id="index_title">所有分類</h2>
 			</div>
 			<div class="row no-gutters">
                 <!--lt = learning & tech-->
