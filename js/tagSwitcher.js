@@ -12,30 +12,33 @@ function getTag(pageNo, callNo) {
         case 0:
             indexCaller(callNo);
             break;
+        case 1: 
+            laserCutCaller(callNo);
+            break;
     }
 }
 
 //0: index.html
-var tagIndex = [
-    //usage: tagIndex[tag title/tag class][num];
-    //tag class
-    //tag title
-    [
-        "", 
-        "所有分類", 
-        "學習與科技組", 
-        "設計與科技組", 
-        "資工系雙主修"
-    ], 
-    [
-        "",  //0: title
-        "index_all",    //1: all categories
-        "index_lt",     //2: learning & technology
-        "index_dt",     //3: design & technology
-        "index_cs"      //4: computer science
-    ]
-];
 function indexCaller(callNo) {
+    var tagIndex = [
+        //usage: tagIndex[tag title/tag class][num];
+        //tag class
+        //tag title
+        [
+            "", 
+            "所有分類", 
+            "學習與科技組", 
+            "設計與科技組", 
+            "資工系雙主修"
+        ], 
+        [
+            "",
+            "index_all",    //1: all categories
+            "index_lt",     //2: learning & technology
+            "index_dt",     //3: design & technology
+            "index_cs"      //4: computer science
+        ]
+    ];
     //get title
     var calledTitle = document.getElementById("index_title");
     calledTitle.innerHTML = tagIndex[0][callNo];
@@ -62,3 +65,14 @@ function indexCaller(callNo) {
 }
 
 //1: LaserCut.html
+function laserCutCaller(callNo) {
+    //get pressed tag color
+    var removeTagColor = document.getElementsByClassName("LCtag");
+    for (var i = 0; i < removeTagColor.length; i++) {
+        removeTagColor[i].classList.remove('btn-primary');
+        removeTagColor[i].classList.add('btn-dark');
+    }
+    var addTagColor = "LCtagger" + callNo;
+    document.getElementById(addTagColor).classList.remove('btn-dark');
+    document.getElementById(addTagColor).classList.add('btn-primary');
+}

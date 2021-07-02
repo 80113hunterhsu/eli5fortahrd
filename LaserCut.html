@@ -115,17 +115,7 @@
             console.log("Tag Switched to " + vidTagList[tagNo - 1]);
             cur = 1;
             switcher();
-            tagBtnColor(vidPrevTag, tagNo);
-        }
-        
-        function tagBtnColor(vidPrevTag, tagNo) {   //tag button color switcher, for the button in content area(currently hidden)
-            var removedId = "tagger" + vidPrevTag;
-            var addedId = "tagger" + tagNo;
-            document.getElementById(removedId).classList.remove('btn-light');
-            document.getElementById(removedId).classList.add('btn-dark');
-            document.getElementById(addedId).classList.remove('btn-dark');
-            document.getElementById(addedId).classList.add('btn-light');
-            console.log("Tag Button Color Changed. ");
+            getTag(1, tagNo);
         }
         
         /* Lists */
@@ -215,23 +205,22 @@
                         <table width="100%" border="0">
                             <tbody class="nav-item">
                                 <tr style="text-align:center;">
-                                    <td style="width: 7%;">
+                                    <td style="width: 5%;">
                                         <a id="btn-prev" href="#prev" onclick="prevVid()" style="">
                                             <img src="img/features/prev.png" alt="prev">
                                         </a>
                                     </td>
-                                    <td style="width: 86%;">
+                                    <td style="width: 90%;">
                                         <div id="vid" style="display:block;">
                                             <center>
                                                 <p>
-                                                    <a id="tagger1" class="btn btn-md btn-light" href="#vidTop1" onClick="tagger(1)">
+                                                    <!--<a id="LCtagger1" class="btn btn-md btn-primary LCtag" href="#vidTop1" onClick="tagger(1)">
                                                         雷切機使用教學
                                                     </a>
-                                                    <a id="tagger2" class="btn btn-md btn-dark" href="#vidTop1" onClick="tagger(2)">
+                                                    <a id="LCtagger2" class="btn btn-md btn-dark LCtag" href="#vidTop1" onClick="tagger(2)">
                                                         3D列印
-                                                    </a><!---->
+                                                    </a>-->
                                                 </p>
-                                                
                                                 <h2 id="vidTitleTag" style="font-size:2.5rem;">雷切機使用教學</h2>
                                                 <h2 id="vidTitle" style="font-size:2.5rem;">雷切機本機1</h2>
                                                 <p></p>
@@ -241,7 +230,7 @@
                                             </center>
                                         </div>
                                     </td>
-                                    <td style="width: 7%;">
+                                    <td style="width: 5%;">
                                         <a id="btn-next" href="#next" onclick="nextVid()" style="">
                                             <img src="img/features/next.png" alt="next">
                                         </a>
