@@ -51,32 +51,7 @@
 	<a class="menu-toggle rounded" href="#">
 		<i class="fas fa-bars"></i>
 	</a>
-	<nav id="sidebar-wrapper">
-		<ul class="sidebar-nav">
-			<li class="sidebar-brand">
-				<a class="js-scroll-trigger" href="#page-top"><b>科技系懶人包！</b></a>
-			</li>
-			<li class="sidebar-nav-item">
-				<a class="js-scroll-trigger" href="LaserCut.html">雷射切割</a>
-			</li>
-			<li class="sidebar-nav-item">
-				<a class="js-scroll-trigger" href="internetIntro.html">網際網路概論</a>
-			</li>
-			<li class="sidebar-nav-item">
-				<a class="js-scroll-trigger" href="calculus.html">微積分</a>
-			</li>
-			<li class="sidebar-nav-item">
-				<a class="js-scroll-trigger" href="cpi.html">資工系 程式設計</a>
-			</li>
-			<hr>
-			<li class="sidebar-nav-item">
-				<a class="js-scroll-trigger" href="https://forms.gle/tN4t4k7mt91NMgQ4A" target="_blank">懶人包主題提供</a>
-			</li>
-			<li class="sidebar-nav-item">
-				<a class="js-scroll-trigger" href="https://forms.gle/oXptZdPXLTaC2wiN7" target="_blank">意見回饋</a>
-			</li>
-		</ul>
-	</nav>
+	<nav id="sidebar-wrapper" w3-include-html="templates/sidebar.html"></nav>
 	
 	<!-- Header -->
 	<header class="masthead d-flex">
@@ -185,19 +160,7 @@
 	</section>
 	
 	<!-- Footer -->
-	<footer class="footer text-center" style="background-color: #ffc107;">
-		<div class="container">
-			<p style="text-align: center;">
-				科技系 數位學習方法與策略 專題<br>
-				40871227H 陳致愷<br>
-				40871121H 陳昱綸<br>
-				40871204H 蘇柏霖<br>
-				40871218H 許恆齊<br>
-				40871232H 黃家偉
-			</p>
-			<p class="text-muted small mb-0">Copyright &copy; <a href="https://www.tahrd.ntnu.edu.tw/" target="_blank">TAHRD 2021</a></p>
-		</div>
-	</footer>
+	<footer class="footer text-center" w3-include-html="templates/footer.html" style="background-color: #ffc107;"></footer>
 	
 	<!-- Scroll to Top Button--> 
 	<a class="scroll-to-top rounded js-scroll-trigger" href="#page-top"> <i class="fas fa-angle-up"></i> </a> 
@@ -211,6 +174,7 @@
 	
 	<!-- Custom scripts for this template --> 
 	<script src="js/stylish-portfolio.min.js"></script>
+    <script>includeHTML();</script>
 </body>
 </html>
 	
