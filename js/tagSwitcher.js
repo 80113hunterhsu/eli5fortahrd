@@ -1,5 +1,21 @@
 ﻿//eli5fortahrd tag switcher
-//index.html
+/*
+Page No:
+    0: index.html
+    1: LaserCut.html
+    2: internetIntro.html
+    3: calculus.html
+    4: cpi.html
+*/
+function getTag(pageNo, callNo) {
+    switch (pageNo) {
+        case 0:
+            indexCaller(callNo);
+            break;
+    }
+}
+
+//0: index.html
 var tagIndex = [
     //usage: tagIndex[tag title/tag class][num];
     //tag class
@@ -19,11 +35,13 @@ var tagIndex = [
         "資工系雙主修"
     ]
 ];
-
-function itemCaller(tagNo) {
-    console.log("tagNo = " + tagNo);
+function indexCaller(callNo) {
+    var calledTitle = document.getElementById("index_title");
+    calledTitle.innerHTML = tagIndex[1][callNo];
+    console.log("Tag: " + tagIndex[1][callNo]);
+    
     var tagOff = document.getElementsByClassName("index_all");
-    var tagOn = document.getElementsByClassName(tagIndex[0][tagNo]);
+    var tagOn = document.getElementsByClassName(tagIndex[0][callNo]);
     for (var i = 0; i < tagOff.length; i++) {
         tagOff[i].style.display = "none";
     }
@@ -32,17 +50,4 @@ function itemCaller(tagNo) {
     }
 }
 
-function titleCaller(titleNo) {
-    var calledTitle = document.getElementById("index_title");
-    calledTitle.innerHTML = tagIndex[1][titleNo];
-    console.log("Tag: " + tagIndex[1][titleNo]);
-}
-
-function getTag(callNo) {
-    //get title with titleCaller
-    titleCaller(callNo);
-    
-    //get items of current tag
-    itemCaller(callNo);
-}
-
+//1: LaserCut.html

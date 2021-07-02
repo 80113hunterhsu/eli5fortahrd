@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@500&display=swap');
+body, h1, h2, h3, h4, h5, h6, a, .btn {
+  font-family: 'Karla', sans-serif !important;
+}
+
 .my-auto {
 	margin-top: auto !important;
 	margin-bottom: auto !important;
@@ -17,6 +22,17 @@
     font-size: 1.2rem;
 }
 
+.rad20 {
+    border-radius: 20px !important;
+}
+
+/*index.html*/
+.content-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+/*laserCut.html*/
 #unitPresentation {
 	background:linear-gradient(90deg,rgba(255,255,255,.1) 0,rgba(255,255,255,.1) 100%),url(../img/bg-callout.jpg);
     background-size: cover;
@@ -27,29 +43,22 @@
     background-size: cover;
 }
 
-.rad20 {
-    border-radius: 20px !important;
+#btn-prev, #btn-next {
+    
 }
-
-@media (min-width:769px){
+@media screen and (min-width:769px){
 	.dynVid {
         width: 80% !important;
     }
-    #btn-prev {
-        width: 100%;
-    }
-    #btn-next {
+    #btn-prev, #btn-next {
         width: 100%;
     }
 }
-@media (max-width:768px){
+@media screen and (max-width:768px){
 	.dynVid {
         width: 100% !important;
     }
-    #btn-prev {
-        width: 50%;
-    }
-    #btn-next {
+    #btn-prev, #btn-next {
         width: 50%;
     }
     #vidTitle, #vidTitleTag {
@@ -58,26 +67,31 @@
 }
 
 /*masthead tag button group*/
-#tagBtnGroup {
+.tagBtnGroup {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 @media screen and (max-width: 991px) {
-    #tagBtnGroup {
+    .tagBtnGroup {
         flex-direction: column;
         align-items: stretch;
     }
-    #tagBtnGroup a {
+    .tagBtnGroup a {
         width: 75%;
         margin-left: auto !important;
         margin-right: auto !important;
             
     }
 }
-#tagBtnGroup a {
+.tagBtnGroup a {
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
+}
+
+/*floatBtn*/
+.scroll-to-top {
+    z-index: 999;
 }

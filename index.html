@@ -21,6 +21,7 @@
     
     <!-- Custom JS-->
     <script src="js/tagSwitcher.js"></script>
+    <script src="js/webhostHide.js"></script>
 	
 	<!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7YSTZYM63V"></script>
@@ -83,11 +84,11 @@
 			<h3 class="mb-5">
 				<em>懶人包在手，便知有沒有</em>
 			</h3>
-            <div id="tagBtnGroup">  <!--caller(callOn, callOff)-->
-			    <a class="btn btn-primary btn-xl js-scroll-trigger" href="#allContents" onClick="getTag(1)">所有分類</a>
-                <a class="btn btn-primary btn-xl js-scroll-trigger" href="#allContents" onClick="getTag(2)">學習與科技組</a>
-                <a class="btn btn-primary btn-xl js-scroll-trigger" href="#allContents" onClick="getTag(3)">設計與科技組</a>
-                <a class="btn btn-primary btn-xl js-scroll-trigger" href="#allContents" onClick="getTag(4)">資工系雙主修</a>
+            <div class="tagBtnGroup">  <!--getTag(pageNo, callNo): tagSwitcher.js-->
+			    <a class="btn btn-primary btn-xl js-scroll-trigger" href="#allContents" onClick="getTag(0, 1)">所有分類</a>
+                <a class="btn btn-primary btn-xl js-scroll-trigger" href="#allContents" onClick="getTag(0, 2)">學習與科技組</a>
+                <a class="btn btn-primary btn-xl js-scroll-trigger" href="#allContents" onClick="getTag(0, 3)">設計與科技組</a>
+                <a class="btn btn-primary btn-xl js-scroll-trigger" href="#allContents" onClick="getTag(0, 4)">資工系雙主修</a>
             </div>
 		</div>
 		<div class="overlay"></div>
@@ -98,12 +99,34 @@
 		<div class="container">
 			<div class="content-section-heading text-center">
 				<h3 class="text-secondary mb-0">擇你所愛，愛你所選</h3>
-				<h2 class="mb-5" id="index_title">所有分類</h2>
+                <!--page title: change at tagSwitcher.js-->
+				<h2 class="mb-3" id="index_title">所有分類</h2>
+                <!--mini tag switch-->
+                <div class="tagBtnGroup mb-5">  <!--getTag(callNo): tagSwitcher.js-->
+			        <a class="btn btn-primary btn-md js-scroll-trigger" href="#allContents1" onClick="getTag(0, 1)">所有分類</a>
+                    <a class="btn btn-primary btn-md js-scroll-trigger" href="#allContents1" onClick="getTag(0, 2)">學習與科技組</a>
+                    <a class="btn btn-primary btn-md js-scroll-trigger" href="#allContents1" onClick="getTag(0, 3)">設計與科技組</a>
+                    <a class="btn btn-primary btn-md js-scroll-trigger" href="#allContents1" onClick="getTag(0, 4)">資工系雙主修</a>
+                </div>
 			</div>
 			<div class="row no-gutters">
+            <!--item tags-->
                 <!--lt = learning & tech-->
                 <!--dt = design & tech-->
                 <!--cs = computer science-->
+            <!--item template: copy the whole <div> to add item to home page
+                <div class="col-lg-6 index_all index_XX">
+					<a class="portfolio-item" href="#destination.html">
+						<div class="caption">
+							<div class="caption-content">
+								<div class="h2">destination title</div>
+								<p class="mb-0">destination subtitle</p>
+							</div>
+						</div>
+						<img class="img-fluid" src="destination image" alt="image alternative text">
+					</a>
+				</div>
+            -->
 				<div class="col-lg-6 index_all index_dt">
 					<a class="portfolio-item" href="LaserCut.html">
 						<div class="caption">
@@ -112,7 +135,7 @@
 								<p class="mb-0">喜歡動手動腳？來試試手感吧！</p>
 							</div>
 						</div>
-						<img class="img-fluid" src="img/portfolio/3dPrint.jpg" alt="3dPrint">
+						<img class="img-fluid" src="img/portfolio/3dPrintLaserCut.jpg" alt="3dPrint">
 					</a>
 				</div>
 				<div class="col-lg-6 index_all index_lt">
@@ -179,9 +202,6 @@
 	
 	<!-- Custom scripts for this template --> 
 	<script src="js/stylish-portfolio.min.js"></script>
-    
-    <!-- 000WebHost Mark Hide -->
-    <script src="js/webhostHide.js"></script>
 </body>
 </html>
 	

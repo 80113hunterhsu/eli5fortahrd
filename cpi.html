@@ -17,6 +17,11 @@
 	
 	<!-- Custom CSS -->
 	<link href="css/stylish-portfolio.min.css" rel="stylesheet">
+	<link href="css/customDefined.css" rel="stylesheet">
+    
+    <!-- Custom JS-->
+    <script src="js/tagSwitcher.js"></script>
+    <script src="js/webhostHide.js"></script>
 	
 	<!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7YSTZYM63V"></script>
@@ -81,8 +86,10 @@
 			<h3 class="mb-5">
 				<em>雙主修資工的你，該看一下吧</em>
 			</h3>
-			<a class="btn btn-primary btn-xl js-scroll-trigger mb-2 mr-2 ml-2 mt-2" href="#links">課程常用網頁連結</a>
-            <a class="btn btn-primary btn-xl js-scroll-trigger mb-2 mr-2 ml-2 mt-2" href="#recommend">推薦學習內容</a>
+            <div class="tagBtnGroup">
+    			<a class="btn btn-primary btn-xl js-scroll-trigger" href="#links">課程常用網頁連結</a>
+                <a class="btn btn-primary btn-xl js-scroll-trigger" href="#recommend">推薦學習內容</a>
+            </div>
 		</div>
 		<div class="overlay"></div>
 	</header>
@@ -96,12 +103,14 @@
 					<p class="lead mb-5">
 						最需要的，最重要的
 					</p>
-					<a class="btn btn-dark btn-xl js-scroll-trigger mb-2 mr-2 ml-2 mt-2" href="https://sites.google.com/gapps.ntnu.edu.tw/cpi" target="_blank">
-						課程網頁
-					</a>
-					<a class="btn btn-dark btn-xl js-scroll-trigger mb-2 mr-2 ml-2 mt-2" href="https://noj.tw/" target="_blank">
-						作業繳交：Normal-OJ
-					</a>
+                    <div class="tagBtnGroup">
+    					<a class="btn btn-dark btn-xl js-scroll-trigger" href="https://sites.google.com/gapps.ntnu.edu.tw/cpi" target="_blank">
+	    					課程網頁
+		    			</a>
+			    		<a class="btn btn-dark btn-xl js-scroll-trigger" href="https://noj.tw/" target="_blank">
+				    		作業繳交：Normal-OJ
+					    </a>
+                    </div>
 				</div>
 			</div>
 		</div>
@@ -112,17 +121,19 @@
     	<div class="container text-center">
     		<h2>推薦學習內容</h2>
             <p class="lead mb-5">
-            	看一下，或許能解決問題，不能解決，就看兩次吧
+            	看一下，或許能解決問題<br>不能解決，就看兩次吧XD
             </p>
-            <a class="btn btn-xl btn-light mb-2 mr-2 ml-2 mt-2" href="https://bit.ly/3xUb3jz" target="_blank">
-                經驗傳承：<br>程式設計修課心得
-            </a>
-    		<a class="btn btn-xl btn-light mb-2 mr-2 ml-2 mt-2" href="https://ocw.nthu.edu.tw/ocw/index.php?page=course&cid=134&" target="_blank">
-                清大開放式課程：<br>計算機程式設計（一）
-            </a>
-            <a class="btn btn-xl btn-light mb-2 mr-2 ml-2 mt-2" href="https://hulitw.medium.com/learn-coding-9c572c2fb2" target="_blank">
-                推薦文章：<br>程式設計，要學的到底是什麼？
-            </a>
+            <div class="tagBtnGroup">
+                <a class="btn btn-xl btn-light" href="https://bit.ly/3xUb3jz" target="_blank">
+                    經驗傳承：<br>程式設計修課心得
+                </a>
+    		    <a class="btn btn-xl btn-light" href="https://ocw.nthu.edu.tw/ocw/index.php?page=course&cid=134&" target="_blank">
+                    清大開放式課程：<br>計算機程式設計（一）
+                </a>
+                <a class="btn btn-xl btn-light" href="https://hulitw.medium.com/learn-coding-9c572c2fb2" target="_blank">
+                    推薦文章：<br>程式設計，要學的到底是什麼？
+                </a>
+            </div>
         </div>
     </section>
 	
@@ -153,9 +164,6 @@
 	
 	<!-- Custom scripts for this template --> 
 	<script src="js/stylish-portfolio.min.js"></script>
-    
-    <!-- 000WebHost Mark Hide -->
-    <script src="js/webhostHide.js"></script>
 </body>
 </html>
 	
