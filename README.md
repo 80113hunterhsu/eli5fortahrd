@@ -42,13 +42,6 @@ A + B = **eli5fortahrd**
 回到頂端：位於網頁右下角，在頁面往下後會顯示，供使用者快速回到頁面頂端
 回到首頁：位於網頁左上角，在首頁以外頁面會顯示，供使用者快速回到首頁
 
-<!--## 未來變更
-
-1. 將會以子選單形式進行頁側科目分類
-2. 可能會加入網站導覽頁面-->
-
-若使用時有遇到任何問題，或是有任何建議都歡迎填寫我們的[意見回饋表單](https://forms.gle/oXptZdPXLTaC2wiN7)！
-
 ## 關於Bootstrap頁面範本
 
 我們採用Start Bootstrap的開放原始碼範本。
@@ -65,3 +58,23 @@ Start Bootstrap was created by and is maintained by **[David Miller](https://dav
 * <https://github.com/davidtmiller>
 
 Start Bootstrap is based on the [Bootstrap](https://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+
+#
+# To Developers
+
+## 目前其實有點小亂
+
+目前的開發狀況主要是由一個人完成的，因此若是在看過原始碼之後覺得有點糟糕的話，拜託不要噴我ＱＱ
+
+## 注意項目
+
+1. 目前網頁中各頁面的Sidebar跟Footer都是以Javascript置入的，所以不需要一頁一頁修改，統一到templates目錄下的sidebar.html及footer.html修改即可。
+2. 網頁中有一些自訂CSS樣式表，統一放在css/customDefined.css檔案中，未來可能會更改或整理，但目前都設定在這個檔案中。
+3. 有一些額外加入的Javascript檔案，都放在js目錄下：
+(1) **includeHTML.js**：置入sidebar及footer等頁面相同項目，API會寫在js檔案中，以註解呈現。
+(2) **tagSwitcher.js**：科技系懶人包預計會有大量的分類標籤使用（目前只有首頁），因此以這個js script統一撰寫各頁面的tags或是switcher主程式，若之後有更好的做法將會更改。
+(3) **webhostHide.js**：目前將網站存放於000webhost的伺服器（帳號密碼於交接時告知），由於000webhost會自動置入公司logo於頁面右下角，因此以這個js script將其隱藏。
+
+## 未開發項目
+
+1. 目前的側邊欄中，是在標題前面加入該科目所屬的分類，而並非以各分類作為選單項目，並將科目加入其子選單中（因為我做不出來ＱＱ），希望之後的開發者可以嘗試看看，以達到更直覺的科目分類整理。
