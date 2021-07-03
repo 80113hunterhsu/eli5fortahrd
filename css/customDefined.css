@@ -26,10 +26,38 @@ body, h1, h2, h3, h4, h5, h6, a, .btn {
     border-radius: 20px !important;
 }
 
+.text-center {
+    text-align: center !important;
+}
+
 /*index.html*/
 .content-section {
     padding-top: 5rem;
     padding-bottom: 5rem;
+}/**/
+#helpTAHRDtitle {
+    font-size: 5vw;
+    color: #FFFFFF;
+}
+#helpTAHRDsubtitle {
+    font-size: 3vw;
+    color: #FFFFFF;
+}
+@media screen and (min-width:992px){
+    #helpTAHRDtitle {
+        font-size: 3vw !important;
+    }
+    #helpTAHRDsubtitle {
+        font-size: 2vw !important;
+    }
+}
+@media screen and (max-width:768px){
+    #helpTAHRDtitle {
+        font-size: 7vw !important;
+    }
+    #helpTAHRDsubtitle {
+        font-size: 5vw !important;
+    }
 }
 
 /*laserCut.html*/
