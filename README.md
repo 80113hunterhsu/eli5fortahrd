@@ -76,6 +76,16 @@ Start Bootstrap is based on the [Bootstrap](https://getbootstrap.com/) framework
 (3) **webhostHide.js**：目前將網站存放於000webhost的伺服器（帳號密碼於交接時告知），由於000webhost會自動置入公司logo於頁面右下角，因此以這個js script將其隱藏。
 (4)頁面內的getTag()是位於tagSwitcher.js中的function，其中，頁面代碼等資訊已經撰寫於tagSwitcher.js檔案中了，可以直接參考並修改
 
+## 已註冊服務
+
+帳號密碼將會於交接時一併轉移告知
+
+1. [Freenom網域](https://my.freenom.com/clientarea.php?action=domains)
+2. [000webhost網頁伺服器](https://www.000webhost.com/members/website/eli5fortahrd/dashboard)
+3. [Cloudflare CDN](https://dash.cloudflare.com/)
+4. [Google Analytics](https://analytics.google.com/analytics/web/#/p270781877/reports/defaulthome?params=_u..nav%3Ddefault)
+5. [Cloudinary Image CDN](https://cloudinary.com/console/)
+
 ## 未開發項目
 
 1. 目前的側邊欄中，是在標題前面加入該科目所屬的分類，而並非以各分類作為選單項目，並將科目加入其子選單中（因為我做不出來ＱＱ），希望之後的開發者可以嘗試看看，以達到更直覺的科目分類整理。
