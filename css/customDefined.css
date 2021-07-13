@@ -30,6 +30,16 @@ body, h1, h2, h3, h4, h5, h6, a, .btn {
     text-align: center !important;
 }
 
+/*sidebar.html*/
+#dtTrig, #ltTrig, #csTrig {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav_dt, .nav_lt, .nav_cs {
+    padding-left: calc(15px + 10px) !important;
+}
+
 /*index.html*/
 .content-section {
     padding-top: 5rem;
