@@ -70,12 +70,12 @@ Start Bootstrap is based on the [Bootstrap](https://getbootstrap.com/) framework
 
 1. 目前網頁中各頁面的Sidebar跟Footer都是以Javascript置入的，所以不需要一頁一頁修改，統一到templates目錄下的sidebar.html及footer.html修改即可。
 2. 網頁中有一些自訂CSS樣式表，統一放在css/customDefined.css檔案中，未來可能會更改或整理，但目前都設定在這個檔案中。
-3. 有一些額外加入的Javascript檔案，都放在js目錄下：
-(1) **includeHTML.js**：置入sidebar及footer等頁面相同項目，API會寫在js檔案中，以註解呈現。
-(2) **tagSwitcher.js**：科技系懶人包預計會有大量的分類標籤使用（目前只有首頁），因此以這個js script統一撰寫各頁面的tags或是switcher主程式，若之後有更好的做法將會更改。
-(3) **webhostHide.js**：目前將網站存放於000webhost的伺服器（帳號密碼於交接時告知），由於000webhost會自動置入公司logo於頁面右下角，因此以這個js script將其隱藏。
-(4) **subMenu.js**：透過此js script實作出側邊欄科目分類收合選單。
-(5)頁面內的getTag()是位於tagSwitcher.js中的function，其中頁面代碼等資訊已經撰寫於tagSwitcher.js檔案中了，可以直接參考並修改。
+3. 有一些額外加入的Javascript檔案，都放在js目錄下：<br>
+(1) **includeHTML.js**：置入sidebar及footer等頁面相同項目，API會寫在js檔案中，以註解呈現。<br>
+(2) **tagSwitcher.js**：科技系懶人包預計會有大量的分類標籤使用（目前只有首頁），因此以這個js script統一撰寫各頁面的tags或是switcher主程式，若之後有更好的做法將會更改。<br>
+(3) **webhostHide.js**：目前將網站存放於000webhost的伺服器（帳號密碼於交接時告知），由於000webhost會自動置入公司logo於頁面右下角，因此以這個js script將其隱藏。<br>
+(4) **subMenu.js**：透過此js script實作出側邊欄科目分類收合選單。<br>
+(5)頁面內的getTag()是位於tagSwitcher.js中的function，其中頁面代碼等資訊已經撰寫於tagSwitcher.js檔案中了，可以直接參考並修改。<br>
 
 ## 已註冊服務
 
