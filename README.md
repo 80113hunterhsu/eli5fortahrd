@@ -74,7 +74,8 @@ Start Bootstrap is based on the [Bootstrap](https://getbootstrap.com/) framework
 (1) **includeHTML.js**：置入sidebar及footer等頁面相同項目，API會寫在js檔案中，以註解呈現。
 (2) **tagSwitcher.js**：科技系懶人包預計會有大量的分類標籤使用（目前只有首頁），因此以這個js script統一撰寫各頁面的tags或是switcher主程式，若之後有更好的做法將會更改。
 (3) **webhostHide.js**：目前將網站存放於000webhost的伺服器（帳號密碼於交接時告知），由於000webhost會自動置入公司logo於頁面右下角，因此以這個js script將其隱藏。
-(4)頁面內的getTag()是位於tagSwitcher.js中的function，其中，頁面代碼等資訊已經撰寫於tagSwitcher.js檔案中了，可以直接參考並修改
+(4) **subMenu.js**：透過此js script實作出側邊欄科目分類收合選單。
+(5)頁面內的getTag()是位於tagSwitcher.js中的function，其中頁面代碼等資訊已經撰寫於tagSwitcher.js檔案中了，可以直接參考並修改。
 
 ## 已註冊服務
 
@@ -88,6 +89,5 @@ Start Bootstrap is based on the [Bootstrap](https://getbootstrap.com/) framework
 
 ## 未開發項目
 
-1. 目前的側邊欄中，是在標題前面加入該科目所屬的分類，而並非以各分類作為選單項目，並將科目加入其子選單中（因為我做不出來ＱＱ），希望之後的開發者可以嘗試看看，以達到更直覺的科目分類整理。
-2. 目前的影片切換（只有雷射切割那邊），是以頁面內js script中的switcher進行的，與其他頁面的tagSwitcher不同，希望之後的開發者可以嘗試看看不同做法，或者將其整理至獨立的video switcher之類的
-3. 原本的雷射切割頁面，是還有包含3D列印的，但由於趕不上期末發表前將教材導入，只好先將其隱藏起來，所以在該頁面的html中可以看到一段被註解掉的tagSwitch就是兩者的分類標籤，這個tagSwitch是與tagSwitcher.js合併過的，可以直接服用
+1. 目前的影片切換（只有雷射切割那邊），是以頁面內js script中的switcher進行的，與其他頁面的tagSwitcher不同，希望之後的開發者可以嘗試看看不同做法，或者將其整理至獨立的video switcher之類的
+2. 原本的雷射切割頁面，是還有包含3D列印的，但由於趕不上期末發表前將教材導入，只好先將其隱藏起來，所以在該頁面的html中可以看到一段被註解掉的tagSwitch就是兩者的分類標籤，這個tagSwitch是與tagSwitcher.js合併過的，可以直接服用
