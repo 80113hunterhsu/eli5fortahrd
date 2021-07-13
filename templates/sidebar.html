@@ -1,30 +1,104 @@
-﻿<ul class="sidebar-nav">
-	<li class="sidebar-brand">
-		<a class="js-scroll-trigger" href="#page-top"><b>科技系懶人包！</b></a>
-	</li>
-	<li class="sidebar-nav-item">
-		<a class="js-scroll-trigger" href="../subjects/LaserCut.html">設科：雷射切割</a>
-	</li>
-    <li class="sidebar-nav-item">
-		<a class="js-scroll-trigger" href="../subjects/Graphics.html">設科：圖學</a>
-	</li>
-    <li class="sidebar-nav-item">
-		<a class="js-scroll-trigger" href="../subjects/EngineeringDesign.html">設科：工程設計</a>
-	</li>
-	<li class="sidebar-nav-item">
-		<a class="js-scroll-trigger" href="../subjects/InternetIntro.html">學科：網際網路概論</a>
-	</li>
-	<li class="sidebar-nav-item">
-		<a class="js-scroll-trigger" href="../subjects/ComputerProgramming.html">資工：程式設計</a>
-	</li>
-	<li class="sidebar-nav-item">
-		<a class="js-scroll-trigger" href="../subjects/Calculus.html">資工：微積分</a>
-	</li>
-	<hr><!--------------------------------->
-	<li class="sidebar-nav-item">
-		<a class="js-scroll-trigger" href="https://forms.gle/tN4t4k7mt91NMgQ4A" target="_blank">懶人包主題提供</a>
-	</li>
-	<li class="sidebar-nav-item">
-		<a class="js-scroll-trigger" href="https://forms.gle/oXptZdPXLTaC2wiN7" target="_blank">意見回饋</a>
-	</li>
+﻿<script>
+    var navDT, navLT, navCS, nav;
+    var dtOn, dtOff, ltOn, ltOff, csOn, csOff, navSwitch;
+    var tagStat = [0, 0, 0]; //tag off by default
+    
+    function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+    
+    function getNav() {
+        navDT = document.getElementsByClassName("nav_dt");  //nav[0]
+        navLT = document.getElementsByClassName("nav_lt");  //nav[1]
+        navCS = document.getElementsByClassName("nav_cs");  //nav[2]
+        nav = [navDT, navLT, navCS];
+        
+        dtOn = document.getElementById("dtOn");     //navSwitch[0][0]
+        dtOff = document.getElementById("dtOff");   //navSwitch[0][1]
+        ltOn = document.getElementById("ltOn");     //navSwitch[1][0]
+        ltOff = document.getElementById("ltOff");   //navSwitch[1][1]
+        csOn = document.getElementById("csOn");     //navSwitch[2][0]
+        csOff = document.getElementById("csOff");   //navSwitch[2][1]
+        navSwitch = [[dtOn, dtOff], [ltOn, ltOff], [csOn, csOff]];
+    }
+    
+    function navSub(navTagNo) {
+        if (tagStat[navTagNo] == 0) {
+            navSubOn(navTagNo);
+            tagStat[navTagNo] = 1;
+        }
+        else if (tagStat[navTagNo] == 1) {
+            navSubOff(navTagNo);
+            tagStat[navTagNo] = 0;
+        }
+    }
+    
+    async function navSubOn(navTagNo) {
+        navSwitch[navTagNo][0].style.display = "none";
+        navSwitch[navTagNo][1].style.display = "block";
+        let links = nav[navTagNo];
+        //for (var i = 0; i < links.length; i++) {
+        //  links[i].style.opacity = 1;  
+        //}
+        await sleep(50);
+        for (var i = 0; i < links.length; i++) {
+            //links[i].style.display = "block !important";
+            links[i].style.setProperty('display', 'block', 'important');
+            await sleep(5);
+        }
+    }
+    
+    async function navSubOff(navTagNo) {
+        navSwitch[navTagNo][1].style.display = "none";
+        navSwitch[navTagNo][0].style.display = "block";
+        let links = nav[navTagNo];
+        //for (var i = 0; i < links.length; i++) {
+        //  links[i].style.opacity = 0;  
+        //}
+        await sleep(50);
+        for (var i = 0; i < links.length; i++) {
+            //links[i].style.display = "none";
+            links[i].style.setProperty('display', 'none', 'important');
+            await sleep(5);
+        }
+    }
+</script>
+
+<ul class="sidebar-nav">
+    <li class="sidebar-brand"> <a class="js-scroll-trigger" href="#page-top"><b>科技系懶人包！</b></a> </li>
+    <!--dt-->
+    <li class="sidebar-nav-item"> 
+        <a id="dtTrig" href="#nav_dt" onClick="navSub(0)"> 
+            設計與科技組 
+            <i class="fa fa-plus" id="dtOn" aria-hidden="true"></i> 
+            <i class="fa fa-minus" id="dtOff" aria-hidden="true" style="display: none;"></i> 
+        </a> 
+    </li>
+        <li class="sidebar-nav-item"> <a class="js-scroll-trigger nav_dt" href="../subjects/LaserCut.html">雷射切割</a> </li>
+        <li class="sidebar-nav-item"> <a class="js-scroll-trigger nav_dt" href="../subjects/Graphics.html">圖學</a> </li>
+        <li class="sidebar-nav-item"> <a class="js-scroll-trigger nav_dt" href="../subjects/EngineeringDesign.html">工程設計</a> </li>
+    <!--lt-->
+    <li class="sidebar-nav-item"> 
+        <a id="ltTrig" href="#nav_lt" onClick="navSub(1)"> 
+            學習與科技組 
+            <i class="fa fa-plus" id="ltOn" aria-hidden="true"></i> 
+            <i class="fa fa-minus" id="ltOff" aria-hidden="true" style="display: none;"></i> 
+        </a> 
+    </li>
+        <li class="sidebar-nav-item"> <a class="js-scroll-trigger nav_lt" href="../subjects/InternetIntro.html">網際網路概論</a> </li>
+    <!--cs-->
+    <li class="sidebar-nav-item"> 
+        <a id="csTrig" href="#nav_cs" onClick="navSub(2)"> 
+            資工系雙主修 
+            <i class="fa fa-plus" id="csOn" aria-hidden="true"></i> 
+            <i class="fa fa-minus" id="csOff" aria-hidden="true" style="display: none;"></i> 
+        </a> 
+    </li>
+        <li class="sidebar-nav-item"> <a class="js-scroll-trigger nav_cs" href="../subjects/ComputerProgramming.html">程式設計</a> </li>
+        <li class="sidebar-nav-item"> <a class="js-scroll-trigger nav_cs" href="../subjects/Calculus.html">微積分</a> </li>
+    <hr>
+    <!--------------------------------->
+    <li class="sidebar-nav-item"> <a class="js-scroll-trigger" href="https://forms.gle/tN4t4k7mt91NMgQ4A" target="_blank">懶人包主題提供</a> </li>
+    <li class="sidebar-nav-item"> <a class="js-scroll-trigger" href="https://forms.gle/oXptZdPXLTaC2wiN7" target="_blank">意見回饋</a> </li>
 </ul>
+<script>getNav();</script>
