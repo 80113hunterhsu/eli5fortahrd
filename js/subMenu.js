@@ -27,6 +27,12 @@ function navSub(navTagNo) {
     if (tagStat[navTagNo] == 0) {
         navSubOn(navTagNo);
         tagStat[navTagNo] = 1;
+        for (var i = 0; i < tagStat.length; i++) {
+            if (i != navTagNo) {
+                navSubOff(i);
+                tagStat[i] = 0;
+            }
+        }
     }
     else if (tagStat[navTagNo] == 1) {
         navSubOff(navTagNo);
