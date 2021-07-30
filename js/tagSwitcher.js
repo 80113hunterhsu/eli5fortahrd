@@ -3,9 +3,11 @@
 Page No:
     0: index.html
     1: LaserCut.html
-    2: internetIntro.html
-    3: calculus.html
-    4: cpi.html
+    2: InternetIntro.html
+    3: Calculus.html
+    4: ComputerProgramming.html
+    5: Graphics.html
+    6: EngineeringDesign.html
 */
 function getTag(pageNo, callNo) {
     switch (pageNo) {
@@ -15,7 +17,21 @@ function getTag(pageNo, callNo) {
         case 1: 
             laserCutCaller(callNo);
             break;
+        case 5:
+            graphicsCaller(callNo);
+            break;
     }
+}
+function colorChange(tagName, tagger, callNo) {
+    var removeTagColor = document.getElementsByClassName(tagName);
+    for (var i = 0; i < removeTagColor.length; i++) {
+        removeTagColor[i].classList.remove('btn-primary');
+        removeTagColor[i].classList.add('btn-dark');
+    }
+    
+    var addTagColor = tagger + callNo;
+    document.getElementById(addTagColor).classList.remove('btn-dark');
+    document.getElementById(addTagColor).classList.add('btn-primary');
 }
 
 //0: index.html
@@ -53,26 +69,44 @@ function indexCaller(callNo) {
         tagOn[i].style.display = "block";
     }
     //get pressed tag color
-    var removeTagColor = document.getElementsByClassName("indexTag");
-    for (var i = 0; i < removeTagColor.length; i++) {
-        removeTagColor[i].classList.remove('btn-primary');
-        removeTagColor[i].classList.add('btn-dark');
-    }
-    var addTagColor = "indexTagger" + callNo;
-    document.getElementById(addTagColor).classList.remove('btn-dark');
-    document.getElementById(addTagColor).classList.add('btn-primary');
-    //console.log("Tag Button Color Changed. ");
+    colorChange("indexTag", "indexTagger", callNo);
 }
 
 //1: LaserCut.html
 function laserCutCaller(callNo) {
     //get pressed tag color
-    var removeTagColor = document.getElementsByClassName("LCtag");
-    for (var i = 0; i < removeTagColor.length; i++) {
-        removeTagColor[i].classList.remove('btn-primary');
-        removeTagColor[i].classList.add('btn-dark');
+    colorChange("LCtag", "LCtagger", callNo);
+}
+
+//5: Graphics.html
+function graphicsCaller(callNo) {
+    var tagIndex = [
+        //usage: tagIndex[callNo];
+        [
+            "", 
+            "一點透視作圖", 
+            "兩點透視作圖", 
+            "三點透視作圖", 
+            "程式作圖", 
+            "等角圖", 
+            "橢圓", 
+            "等分已知圓面積", 
+            "擺線畫法"
+        ]
+    ];
+    //get title
+    var calledTitle = document.getElementById("index_title");
+    calledTitle.innerHTML = tagIndex[0][callNo];
+    console.log("Tag: " + tagIndex[0][callNo]);
+    //get tagged items
+    var tagOff = document.getElementsByClassName("index_all");
+    var tagOn = document.getElementsByClassName(tagIndex[1][callNo]);
+    for (var i = 0; i < tagOff.length; i++) {
+        tagOff[i].style.display = "none";
     }
-    var addTagColor = "LCtagger" + callNo;
-    document.getElementById(addTagColor).classList.remove('btn-dark');
-    document.getElementById(addTagColor).classList.add('btn-primary');
+    for (var i = 0; i < tagOn.length; i++) {
+        tagOn[i].style.display = "block";
+    }
+    //get pressed tag color
+    colorChange("indexTag", "indexTagger", callNo);
 }

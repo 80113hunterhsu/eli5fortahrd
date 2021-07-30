@@ -126,16 +126,16 @@
             [
                 //title     vidList[1][0]
                 [
-                    //title 1
+                    //title 1   vidList[1][0][0]
                     "3D列印機本機1", 
-                    //title 2
+                    //title 2   vidList[1][0][1]
                     "切片軟體操作"
                 ], 
                 //src       vidList[1][1]
                 [   //replace the dashes with youtube links, same as above
-                    //src 1
+                    //src 1     vidList[1][1][0]
                     "https://www.youtube-nocookie.com/embed/-----------", 
-                    //src 2
+                    //src 2     vidList[1][1][1]
                     "https://www.youtube-nocookie.com/embed/-----------"
                 ]
             ]
@@ -161,7 +161,6 @@
             }
             switcher();
         }
-        
         function nextVid(){     //next video index finder
             prev = cur;
             if(cur == vidCount[vidTagNo - 1]) {
