@@ -2,7 +2,7 @@
 
 ## 懶人包在手，便知有沒有
 
-[科技系懶人包](https://eli5fortahrd.ml)原本是為了丁老師的「數位學習發展與策略」專題發展而來的網站。為了讓科技系的各位同學們能夠有一個快速上手了解科技系、以及在學習時能夠提供輔助的平台，我們開發了這個網站，並希望由科技系的各位同學來提供我們學習資源，也藉此來幫助更多的學弟妹們。
+[科技系懶人包](https://eli5fortahrd.ml)原本是為了丁玉良老師的「數位學習發展與策略」專題發展而來的網站。為了讓科技系的各位同學們能夠有一個快速上手了解科技系、以及在學習時能夠提供輔助的平台，我們開發了這個網站，並希望由科技系的各位同學來提供我們學習資源，也藉此來幫助更多的學弟妹們。
 
 ## 預覽
 
@@ -14,8 +14,8 @@
 
 ### 命名由來
 
-A. Explain Like I'm 5 >> ELI5
-B. For TAHRD >> fortahrd
+A. Explain Like I'm 5 >> ELI5<br>
+B. For TAHRD >> fortahrd<br>
 A + B = **eli5fortahrd**
 
 ### 網站特色
@@ -68,11 +68,11 @@ Start Bootstrap is based on the [Bootstrap](https://getbootstrap.com/) framework
 
 ## 注意項目
 
-1. 目前網頁中各頁面的Sidebar跟Footer都是以Javascript置入的，所以不需要一頁一頁修改，統一到templates目錄下的sidebar.html及footer.html修改即可。
+1. 目前網頁中各頁面的Sidebar跟Footer都是以Javascript導入的，不需要一頁一頁修改，統一到templates目錄下的sidebar.html及footer.html修改即可。
 2. 網頁中有一些自訂CSS樣式表，統一放在css/customDefined.css檔案中，未來可能會更改或整理，但目前都設定在這個檔案中。
 3. 有一些額外加入的Javascript檔案，都放在js目錄下：<br>
 (1) **includeHTML.js**：置入sidebar及footer等頁面相同項目，API會寫在js檔案中，以註解呈現。<br>
-(2) **tagSwitcher.js**：科技系懶人包預計會有大量的分類標籤使用（目前只有首頁），因此以這個js script統一撰寫各頁面的tags或是switcher主程式，若之後有更好的做法將會更改。<br>
+(2) **tagSwitcher.js**：科技系懶人包預計會有大量的分類標籤使用，因此以這個js script統一撰寫各頁面的tags或是switcher主程式，若之後有更好的做法將會更改。<br>
 (3) **webhostHide.js**：目前將網站存放於000webhost的伺服器（帳號密碼於交接時告知），由於000webhost會自動置入公司logo於頁面右下角，因此以這個js script將其隱藏。<br>
 (4) **subMenu.js**：透過此js script實作出側邊欄科目分類收合選單。<br>
 (5)頁面內的getTag()是位於tagSwitcher.js中的function，其中頁面代碼等資訊已經撰寫於tagSwitcher.js檔案中了，可以直接參考並修改。<br>
