@@ -20,6 +20,9 @@ function getTag(pageNo, callNo) {
         case 5:
             graphicsCaller(callNo);
             break;
+        case 9:
+            graphicsTempCaller(callNo);
+            break;
     }
 }
 function colorChange(tagName, tagger, callNo) {
@@ -108,5 +111,10 @@ function graphicsCaller(callNo) {
         tagOn[i].style.display = "block";
     }
     //get pressed tag color
-    colorChange("indexTag", "indexTagger", callNo);
+    colorChange("GRtag", "GRtagger", callNo);
+}
+//9: GraphicsTemp.html
+function graphicsTempCaller(callNo) {
+    //get pressed tag color
+    colorChange("GRtag", "GRtagger", callNo);
 }

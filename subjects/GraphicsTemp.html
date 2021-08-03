@@ -78,18 +78,18 @@
         var prev;   //previous video index
         var cur = 1;    //current video index, default: 1
         var vidFirst = 1;   //current video counter start index, default: 1
-        var vidCount = [3, 2];	//[tag1, tag2]   //listed by videoTag orders
+        var vidCount = [4, 3, 2, 2, 5, 4, 2];	//[tag1, tag2]   //listed by videoTag orders
         
-        var vidTagNo = 1;   //video tag index, default: 1(laser cutter tutorial);
+        var vidTagNo = 1;   //video tag index, default: 1
         var vidPrevTag;     //previous video tag, used for button color changing in tagBtnColor()
         function tagger(tagNo) {    //video tag switcher, receives tagNo while button onClick
-            vidPrevTag = vidTagNo;
+            vidPrevTag = 1;
             vidTagNo = tagNo;
-            document.getElementById("vidTitleTag").innerHTML = vidTagList[tagNo - 1];
+            document.getElementById("GRtitle").innerHTML = vidTagList[tagNo - 1];
             console.log("Tag Switched to " + vidTagList[tagNo - 1]);
             cur = 1;
             switcher();
-            getTag(1, tagNo);
+            getTag(9, tagNo);
         }
         
         /* Lists */
@@ -119,13 +119,13 @@
                 //src       vidList[0][1]
                 [
                     //src 1
-                    "https://www.youtube-nocookie.com/embed/YeQTugspxSo", 
+                    "https://www.youtube.com/embed/YeQTugspxSo", 
                     //src 2
-                    "https://www.youtube-nocookie.com/embed/byIMlTlRuAI", 
+                    "https://www.youtube.com/embed/byIMlTlRuAI", 
                     //src 3
-                    "https://www.youtube-nocookie.com/embed/lgUjAYueUek", 
+                    "https://www.youtube.com/embed/lgUjAYueUek", 
                     //src 4
-                    "https://www.youtube-nocookie.com/embed/vAbBwPugOIw"
+                    "https://www.youtube.com/embed/vAbBwPugOIw"
                 ]
             ],
             //tag02: 兩點透視作圖   vidList[1]
@@ -142,11 +142,11 @@
                 //src       vidList[1][1]
                 [
                     //src 1
-                    "https://www.youtube-nocookie.com/embed/dVduOcd5xn8", 
+                    "https://www.youtube.com/embed/dVduOcd5xn8", 
                     //src 2
-                    "https://www.youtube-nocookie.com/embed/P39MUVmen58", 
+                    "https://www.youtube.com/embed/P39MUVmen58", 
                     //src 3
-                    "https://www.youtube-nocookie.com/embed/n11f4ykhSYA"
+                    "https://www.youtube.com/embed/n11f4ykhSYA"
                 ]
             ],
             //tag03: 三點透視作圖   vidList[2]
@@ -161,9 +161,9 @@
                 //src       vidList[2][1]
                 [
                     //src 1
-                    "https://www.youtube-nocookie.com/embed/_Ptvu9k4AwY", 
+                    "https://www.youtube.com/embed/_Ptvu9k4AwY", 
                     //src 2
-                    "https://www.youtube-nocookie.com/embed/g81Fmm052XI"
+                    "https://www.youtube.com/embed/g81Fmm052XI"
                 ]
             ],
             //tag04: 程式作圖   vidList[3]
@@ -178,9 +178,9 @@
                 //src       vidList[3][1]
                 [
                     //src 1
-                    "https://www.youtube-nocookie.com/embed/Qn0yzq0o-rI", 
+                    "https://www.youtube.com/embed/Qn0yzq0o-rI", 
                     //src 2
-                    "https://www.youtube-nocookie.com/embed/Natp1t4OrI4"
+                    "https://www.youtube.com/embed/Natp1t4OrI4"
                 ]
             ],
             //tag05: 等角圖   vidList[4]
@@ -201,15 +201,15 @@
                 //src       vidList[4][1]
                 [
                     //src 1
-                    "https://www.youtube-nocookie.com/embed/24nq3wB-brQ", 
+                    "https://www.youtube.com/embed/24nq3wB-brQ", 
                     //src 2
-                    "https://www.youtube-nocookie.com/embed/bw46LV7TGtE", 
+                    "https://www.youtube.com/embed/bw46LV7TGtE", 
                     //src 3
-                    "https://www.youtube-nocookie.com/embed/0EC32OIdS2g", 
+                    "https://www.youtube.com/embed/0EC32OIdS2g", 
                     //src 4
-                    "https://www.youtube-nocookie.com/embed/0-rywKvbizI", 
+                    "https://www.youtube.com/embed/0-rywKvbizI", 
                     //src 5
-                    "https://www.youtube-nocookie.com/embed/EzYZqXe2ZGU"
+                    "https://www.youtube.com/embed/EzYZqXe2ZGU"
                 ]
             ],
             //tag06: 橢圓   vidList[5]
@@ -228,13 +228,13 @@
                 //src       vidList[5][1]
                 [
                     //src 1
-                    "https://www.youtube-nocookie.com/embed/N60kEsCjPVs", 
+                    "https://www.youtube.com/embed/N60kEsCjPVs", 
                     //src 2
-                    "https://www.youtube-nocookie.com/embed/QxCNQysf-Is", 
+                    "https://www.youtube.com/embed/QxCNQysf-Is", 
                     //src 3
-                    "https://www.youtube-nocookie.com/embed/R5tlaVcKluw", 
+                    "https://www.youtube.com/embed/R5tlaVcKluw", 
                     //src 4
-                    "https://www.youtube-nocookie.com/embed/2BY-m9wskHU"
+                    "https://www.youtube.com/embed/2BY-m9wskHU"
                 ]
             ],
             //tag07: 程式作圖   vidList[6]
@@ -249,15 +249,15 @@
                 //src       vidList[6][1]
                 [
                     //src 1
-                    "https://www.youtube-nocookie.com/embed/f6-vFztppAk", 
+                    "https://www.youtube.com/embed/f6-vFztppAk", 
                     //src 2
-                    "https://www.youtube-nocookie.com/embed/MmdHtYCWMQA"
+                    "https://www.youtube.com/embed/MmdHtYCWMQA"
                 ]
             ]
         ];
         
         function switcher() {   //video switcher, called by prevVid()/nextVid()/tagger()
-            document.getElementById("vidTitle").innerHTML = vidList[vidTagNo - 1][0][cur - 1]; //getTitle
+            document.getElementById("GRvidTitle").innerHTML = vidList[vidTagNo - 1][0][cur - 1]; //getTitle
             $('iframe').attr('src',vidList[vidTagNo - 1][1][cur - 1]);;   //getSrc
             _log();
         }
@@ -295,6 +295,35 @@
 				<div class="col-lg-12" id="vidTop">
                     <center>
                         <table width="100%" border="0">
+                            <center>
+                                <p>
+                                    <div class="tagBtnGroup">
+                                        <a id="GRtagger1" class="btn btn-md btn-primary GRtag" href="#GraphicsTutorial" onClick="tagger(1)">
+                                            一點透視作圖
+                                        </a>
+                                        <a id="GRtagger2" class="btn btn-md btn-dark GRtag" href="#GraphicsTutorial" onClick="tagger(2)">
+                                            兩點透視作圖
+                                        </a>
+                                        <a id="GRtagger3" class="btn btn-md btn-dark GRtag" href="#GraphicsTutorial" onClick="tagger(3)">
+                                            三點透視作圖
+                                        </a>
+                                        <a id="GRtagger4" class="btn btn-md btn-dark GRtag" href="#GraphicsTutorial" onClick="tagger(4)">
+                                            程式作圖
+                                        </a>
+                                        <a id="GRtagger5" class="btn btn-md btn-dark GRtag" href="#GraphicsTutorial" onClick="tagger(5)">
+                                            等角圖
+                                        </a>
+                                        <a id="GRtagger6" class="btn btn-md btn-dark GRtag" href="#GraphicsTutorial" onClick="tagger(6)">
+                                            橢圓
+                                        </a>
+                                        <a id="GRtagger7" class="btn btn-md btn-dark GRtag" href="#GraphicsTutorial" onClick="tagger(7)">
+                                            其他
+                                        </a>
+                                    </div>
+                                </p>
+                                <h2 id="GRtitle" style="font-size:2.5rem;">一點透視作圖</h2>
+                                <h2 id="GRvidTitle" style="font-size:2.5rem;">一點透視作圖 - 01</h2>
+                            </center>
                             <tbody class="nav-item">
                                 <tr style="text-align:center;">
                                     <td style="width: 5%;">
@@ -305,37 +334,10 @@
                                     <td style="width: 90%;">
                                         <div id="vid" style="display:block;">
                                             <center>
-                                                <p>
-                                                    <a id="GRtagger1" class="btn btn-md btn-primary GRtag" href="#vidTop1" onClick="getTag(5, 1)">
-                                                        一點透視作圖
-                                                    </a>
-                                                    <a id="GRtagger2" class="btn btn-md btn-dark GRtag" href="#vidTop1" onClick="getTag(5, 2)">
-                                                        兩點透視作圖
-                                                    </a>
-                                                    <a id="GRtagger2" class="btn btn-md btn-dark GRtag" href="#vidTop1" onClick="getTag(5, 2)">
-                                                        三點透視作圖
-                                                    </a>
-                                                    <a id="GRtagger2" class="btn btn-md btn-dark GRtag" href="#vidTop1" onClick="getTag(5, 2)">
-                                                        程式作圖
-                                                    </a>
-                                                    <a id="GRtagger2" class="btn btn-md btn-dark GRtag" href="#vidTop1" onClick="getTag(5, 2)">
-                                                        等角圖
-                                                    </a>
-                                                    <a id="GRtagger2" class="btn btn-md btn-dark GRtag" href="#vidTop1" onClick="getTag(5, 2)">
-                                                        橢圓
-                                                    </a>
-                                                    <a id="GRtagger2" class="btn btn-md btn-dark GRtag" href="#vidTop1" onClick="getTag(5, 2)">
-                                                        等分已知圓面積
-                                                    </a>
-                                                    <a id="GRtagger2" class="btn btn-md btn-dark GRtag" href="#vidTop1" onClick="getTag(5, 2)">
-                                                        擺線畫法
-                                                    </a>
-                                                </p>
-                                                <h2 id="GRtitle" style="font-size:2.5rem;">雷切機使用教學</h2>
-                                                <h2 id="GRvidTitle" style="font-size:2.5rem;">雷切機本機1</h2>
                                                 <p></p>
                                                 <div class="embed-responsive embed-responsive-4by3 dynVid rad20">
-                                                    <iframe class="video embed-responsive-item" src="https://www.youtube-nocookie.com/embed/CStomx2LJzc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                                                    
+                                                    <iframe class="video embed-responsive-item" src="https://www.youtube.com/embed/YeQTugspxSo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                 </div>
                                             </center>
                                         </div>
@@ -355,7 +357,7 @@
     </section>
 
     <!-- links -->
-	<section class="content-section bg-light" id="links">
+	<section class="content-section bg-light hider" id="links">
 		<div class="container text-center">
 			<div class="row">
 				<div class="col-lg-10 mx-auto">

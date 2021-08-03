@@ -74,7 +74,7 @@ body, h1, h2, h3, h4, h5, h6, a, .btn {
     background-size: cover;
 }
 
-#laserCutterTutorial {
+#laserCutterTutorial, #GraphicsTutorial {
     background:linear-gradient(90deg,rgba(255,255,255,.1) 0,rgba(255,255,255,.1) 100%),url(../img/bg-callout.jpg);
     background-size: cover;
 }
@@ -97,7 +97,11 @@ body, h1, h2, h3, h4, h5, h6, a, .btn {
     #btn-prev, #btn-next {
         width: 50%;
     }
-    #vidTitle, #vidTitleTag {
+    #vidTitleTag, #GRtitle {
+        font-size: 1.5rem !important;
+        font-weight: 900;
+    }
+    #vidTitle, #GRvidTitle {
         font-size: 1.3rem !important;
     }
 }
