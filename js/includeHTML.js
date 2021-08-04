@@ -22,7 +22,7 @@ function includeHTML() {
       }
       xhttp.open("GET", file, true);
       xhttp.send();
-      console.log("element " + i + " included. ");
+      //console.log("element " + i + " included. ");
       /* Exit the function: */
       return;
     }

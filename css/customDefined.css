@@ -52,18 +52,18 @@ body, h1, h2, h3, h4, h5, h6, a, .btn {
     color: #FFFFFF;
 }
 @media screen and (min-width:992px){
-    #helpTAHRDtitle {
+    #helpTAHRDtitle, #joinUsTitle, #thankYouNote {
         font-size: 3vw !important;
     }
-    #helpTAHRDsubtitle {
+    #helpTAHRDsubtitle, #joinUsSubtitle {
         font-size: 2vw !important;
     }
 }
 @media screen and (max-width:768px){
-    #helpTAHRDtitle {
+    #helpTAHRDtitle, #joinUsTitle, #thankYouNote {
         font-size: 7vw !important;
     }
-    #helpTAHRDsubtitle {
+    #helpTAHRDsubtitle, #joinUsSubtitle {
         font-size: 5vw !important;
     }
 }
@@ -79,9 +79,6 @@ body, h1, h2, h3, h4, h5, h6, a, .btn {
     background-size: cover;
 }
 
-#btn-prev, #btn-next {
-    
-}
 @media screen and (min-width:769px){
 	.dynVid {
         width: 80% !important;
