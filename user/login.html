@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>登入 - 科技系懶人包</title>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	
+	<!-- Custom Fonts -->
+	<link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+	<link href="../vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+	
+	<!-- Custom CSS -->
+	<link href="../css/stylish-portfolio.min.css" rel="stylesheet">
+	<link href="../css/customDefined.css" rel="stylesheet">
+    
+    <!-- Custom JS-->
+    <script src="../js/includeHTML.js"></script>
+    <script src="../js/tagSwitcher.js"></script>
+    <script src="../js/subMenu.js"></script>
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HP1QM4Q74D"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-HP1QM4Q74D');
+    </script>
+	
+	<!-- Onpage Style -->
+	<style>
+		header {
+			/*background-image: url(img/indexBG.jpg) !important;*/
+			background-size: 100%; 
+			color: #ffffff;
+			opacity: 0.85;
+			text-shadow: 2px 2px black;
+		}
+	</style>
+</head>
+	
+<body id="page-top">
+	<!-- Navigation -->
+	<a class="menu-toggle rounded" href="#">
+		<i class="fas fa-bars"></i>
+	</a>
+	<nav id="sidebar-wrapper" w3-include-html="templates/sidebar.html"></nav>
+	
+	<!-- Header -->
+	<header class="masthead d-flex">
+        <!-- login -->
+		<div class="container text-center my-auto col-lg-4 col-sm-10" id="userLogin">
+			<h1 class="mb-1 ">登入</h1>
+			<h3 class="mb-5">
+				<em></em>
+			</h3>
+            <form>
+              <div class="form-group">
+                <label for="user_account">
+                  <b class="h3">學號</b>
+                  <span id="user_account_required" style="display: none;">
+                    <b style="color: red;"><br>請輸入學號</b>
+                  </span>
+                </label>
+                <input type="text" class="form-control" id="user_account" aria-describedby="user_account" placeholder="學號" required="1">
+              </div>
+              <div class="form-group">
+                <label for="user_pwd">
+                  <b class="h3">密碼</b>
+                  <span id="user_pwd_required" style="display: none;">
+                    <b style="color: red;"><br>請輸入密碼</b>
+                  </span>
+                </label>
+                <input type="text" class="form-control" id="user_pwd" placeholder="密碼" required="1">
+              </div>
+              <a class="btn btn-danger btn-lg mr-2" href="#" role="button" onclick="forgotPass();">忘記密碼</a>
+              <a class="btn btn-success btn-lg ml-2" href="#" role="button" type="submit">登入</a>
+            </form>
+		</div>
+        <!-- forgotPass -->
+		<div class="container text-center my-auto col-lg-4 col-sm-10" id="userForgotPass" style="display: none;">
+			<h1 class="mb-1 ">忘記密碼</h1>
+			<h3 class="mb-5">
+				<em></em>
+			</h3>
+            <form>
+              <div class="form-group">
+                <label for="user_account_recovery">
+                  <b class="h3">學號</b>
+                </label>
+                <input type="text" class="form-control" id="user_account_recovery" aria-describedby="user_account_recovery" placeholder="學號" required="1">
+              </div>
+              <div class="form-group">
+                <label for="user_email">
+                  <b class="h3">電子郵件</b>
+                </label>
+                <input type="text" class="form-control" id="user_email" placeholder="密碼" required="1">
+              </div>
+              <a class="btn btn-dark btn-lg mr-2" href="#" role="button" onClick="noForgotPass();">返回</a>
+              <a class="btn btn-danger btn-lg mr-2" href="#" role="button" type="submit">重設密碼</a>
+            </form>
+		</div>
+		<div class="overlay"></div>
+        <script>
+            function forgotPass() {
+                document.getElementById("userLogin").style.display = "none";
+                document.getElementById("userForgotPass").style.display = "block";
+            }
+            function noForgotPass() {
+                document.getElementById("userForgotPass").style.display = "none";
+                document.getElementById("userLogin").style.display = "block";
+            }
+        </script>
+	</header>
+    
+	<!-- Footer -->
+	<footer class="footer text-center" w3-include-html="templates/footer.html" style="background-color: #ffc107;"></footer>
+	
+	<!-- Scroll to Top Button--> 
+	<a class="scroll-to-top rounded js-scroll-trigger" href="#page-top"> <i class="fas fa-angle-up"></i> </a> 
+	
+	<!-- Bootstrap core JavaScript --> 
+	<script src="../vendor/jquery/jquery.min.js"></script> 
+	<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
+	
+	<!-- Plugin JavaScript --> 
+	<script src="../vendor/jquery-easing/jquery.easing.min.js"></script> 
+	
+	<!-- Custom scripts for this template --> 
+	<script src="../js/stylish-portfolio.min.js"></script>
+    <script>includeHTML();</script> <!--w3-include-html caller-->
+</body>
+</html>
+	

@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<title>微積分 考古題 - 科技系懶人包</title>
+	<title>登入 - 科技系懶人包</title>
 
 	<!-- Bootstrap Core CSS -->
 	<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -37,75 +37,64 @@
 	<!-- Onpage Style -->
 	<style>
 		header {
-			background-image: url(../img/subjects/Calculus/titleBG.jpg) !important;
-			background-blend-mode: darken soft-light;
+			/*background-image: url(img/indexBG.jpg) !important;*/
+			background-size: 100%; 
 			color: #ffffff;
+			opacity: 0.85;
 			text-shadow: 2px 2px black;
 		}
 	</style>
 </head>
 	
 <body id="page-top">
-	<!-- Home Button-->
-	<a class="home-toggle rounded" href="../index.html">
-		<i class="fas fa-home"></i>
-	</a>
-	<!-- Navigation --> 
+	<!-- Navigation -->
 	<a class="menu-toggle rounded" href="#">
 		<i class="fas fa-bars"></i>
 	</a>
-	<nav id="sidebar-wrapper" w3-include-html="../templates/sidebar.html"></nav>
+	<nav id="sidebar-wrapper" w3-include-html="templates/sidebar.html"></nav>
 	
 	<!-- Header -->
 	<header class="masthead d-flex">
-		<div class="container text-center my-auto">
-			<h1 class="mb-1">微積分</h1>
+        <div class="container text-center my-auto col-lg-4 col-sm-10" id="userRegister">
+			<h1 class="mb-1 ">註冊</h1>
 			<h3 class="mb-5">
-				<em>微積分變危機了？沒關係，我也是。</em>
+				<em></em>
 			</h3>
-            <div class="tagBtnGroup">
-    			<a class="btn btn-primary btn-xl js-scroll-trigger" href="#downloads">H...Help...</a>
-            </div>
+            <form>
+              <div class="form-group">
+                <label for="user_name">
+                  <b class="h3">暱稱</b>
+                </label>
+                <input type="text" class="form-control" id="user_name" aria-describedby="user_name" placeholder="暱稱" required="1">
+              </div>
+              <div class="form-group">
+                <label for="user_account">
+                  <b class="h3">學號</b>
+                </label>
+                <input type="text" class="form-control" id="user_account" aria-describedby="user_account" placeholder="學號" required="1">
+              </div>
+              <div class="form-group">
+                <label for="user_pwd">
+                  <b class="h3">密碼</b>
+                </label>
+                <input type="text" class="form-control" id="user_pwd" placeholder="密碼" required="1">
+              </div>
+              <div class="form-group">
+                <label for="user_email">
+                  <b class="h3">電子郵件</b>
+                </label>
+                <input type="text" class="form-control" id="user_email" placeholder="電子郵件" required="1">
+              </div>
+              <a class="btn btn-success btn-lg" href="#" role="button" type="submit">註冊</a>
+            </form>
 		</div>
 		<div class="overlay"></div>
 	</header>
-	
-	<!-- downloads -->
-	<section class="content-section bg-light" id="downloads">
-		<div class="container text-center">
-			<div class="row">
-				<div class="col-lg-12 mx-auto">
-					<h2 class="mb-5">考古題下載</h2>
-                    <div class="tagBtnGroup">
-					    <a class="btn btn-primary btn-xl" href="https://bit.ly/3vqir40" target="_blank">微乙（一）期中考</a>
-					    <a class="btn btn-primary btn-xl" href="https://bit.ly/2Ra3PXy" target="_blank">微乙（一）期末考</a>
-					    <a class="btn btn-primary btn-xl" href="https://bit.ly/2R9FAbY" target="_blank">微乙（二）期中考</a>
-					    <a class="btn btn-primary btn-xl" href="https://bit.ly/3vsQskm" target="_blank">微乙（二）期末考</a>
-                    </div>
-                </div>
-			</div>
-		</div>
-	</section>
     
-<!--item template: copy this <section> to create a new content section
-	<section class="content-section bg-light" id="[section id]">
-		<div class="container text-center">
-			<div class="row">
-				<div class="col-lg-12 mx-auto">
-					<h2 class="mb-5">[section name]</h2>
-                    <div class="tagBtnGroup">
-					    [section contents]
-                    </div>
-                </div>
-			</div>
-		</div>
-	</section>
--->
-	
 	<!-- Footer -->
-	<footer class="footer text-center" w3-include-html="../templates/footer.html" style="background-color: #ffc107;"></footer>
+	<footer class="footer text-center" w3-include-html="templates/footer.html" style="background-color: #ffc107;"></footer>
 	
-	<!-- Scroll to Top Button-->
+	<!-- Scroll to Top Button--> 
 	<a class="scroll-to-top rounded js-scroll-trigger" href="#page-top"> <i class="fas fa-angle-up"></i> </a> 
 	
 	<!-- Bootstrap core JavaScript --> 
