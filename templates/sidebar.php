@@ -1,4 +1,4 @@
-﻿<nav id="sidebar-wrapper">
+<nav id="sidebar-wrapper">
     <ul class="sidebar-nav">
         <li class="sidebar-brand"> <a class="js-scroll-trigger" href="#page-top"><b>科技系懶人包！</b></a> </li>
         <!--dt-->
