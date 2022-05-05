@@ -20,7 +20,7 @@
 	<link href="css/customDefined.css" rel="stylesheet">
     
     <!-- Custom JS-->
-    <script src="js/includeHTML.js"></script>
+    <!--<script src="js/includeHTML.js"></script>-->
     <script src="js/tagSwitcher.js"></script>
     <script src="js/webhostHide.js"></script>
     <script src="js/subMenu.js"></script>
@@ -259,6 +259,6 @@
 	
 	<!-- Custom scripts for this template --> 
 	<script src="js/stylish-portfolio.min.js"></script>
-    <script>//includeHTML();</script> <!--w3-include-html caller-->
+    <!--<script>//includeHTML();</script>--> <!--w3-include-html caller-->
 </body>
 </html>
