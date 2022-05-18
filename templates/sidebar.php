@@ -36,8 +36,8 @@
         <hr>
         <!--------------------------------->
         <li class="sidebar-nav-item"> 
-            <a class="js-scroll-trigger" href="../user/login.php">登入</a>
-            <a class="js-scroll-trigger" href="../user/register.php">註冊</a>
+            <a class="js-scroll-trigger" href="../user?action=login">登入</a>
+            <a class="js-scroll-trigger" href="../user?action=register">註冊</a>
         </li>
 
         <hr>
