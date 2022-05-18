@@ -20,7 +20,6 @@
 	<link href="../css/customDefined.css" rel="stylesheet">
     
     <!-- Custom JS-->
-    <script src="../js/includeHTML.js"></script>
     <script src="../js/tagSwitcher.js"></script>
     <script src="../js/subMenu.js"></script>
 	
@@ -48,14 +47,14 @@
 	
 <body id="page-top">
 	<!-- Home Button-->
-	<a class="home-toggle rounded" href="../index.html">
+	<a class="home-toggle rounded" href="../">
 		<i class="fas fa-home"></i>
 	</a>
 	<!-- Navigation --> 
 	<a class="menu-toggle rounded" href="#">
 		<i class="fas fa-bars"></i>
 	</a>
-	<nav id="sidebar-wrapper" w3-include-html="../templates/sidebar.html"></nav>
+	<?php include("./templates/sidebar.php"); ?>
 	
 	<!-- Header -->
 	<header class="masthead d-flex">
@@ -247,7 +246,7 @@
 	</section>
     
 	<!-- Footer -->
-	<footer class="footer text-center" w3-include-html="../templates/footer.html" style="background-color: #ffc107;"></footer>
+	<?php include("./templates/footer.php"); ?>
 	
 	<!-- Scroll to Top Button--> 
 	<a class="scroll-to-top rounded js-scroll-trigger" href="#page-top"> <i class="fas fa-angle-up"></i> </a> 
@@ -261,7 +260,6 @@
 	
 	<!-- Custom scripts for this template --> 
 	<script src="../js/stylish-portfolio.min.js"></script>
-    <script>includeHTML();</script> <!--w3-include-html caller-->
 </body>
 </html>
 	

@@ -62,7 +62,7 @@
 	<!-- Header -->
 	<header class="masthead d-flex">
 		<div class="container text-center my-auto">
-			<h1 class="mb-1 ">科技系懶人包！</h1>
+			<h1 class="mb-1">科技系懶人包！</h1>
 			<h3 class="mb-5">
 				<em>懶人包在手，便知有沒有</em>
 			</h3>
@@ -127,7 +127,7 @@
             -->
             <!-- dt: Design and Technology -->
 				<div class="col-lg-6 index_all index_dt">
-					<a class="portfolio-item" href="subjects/LaserCut.html">
+					<a class="portfolio-item" href="subjects/LaserCut.php">
 						<div class="caption">
 							<div class="caption-content">
 								<div class="h2">雷射切割</div>
@@ -138,7 +138,7 @@
 					</a>
 				</div>
                 <div class="col-lg-6 index_all index_dt">
-					<a class="portfolio-item" href="subjects/Graphics.html">
+					<a class="portfolio-item" href="subjects/Graphics.php">
 						<div class="caption">
 							<div class="caption-content">
 								<div class="h2">圖學</div>
@@ -149,7 +149,7 @@
 					</a>
 				</div>
                 <div class="col-lg-6 index_all index_dt hider">
-					<a class="portfolio-item" href="subjects/EngineeringDesign.html">
+					<a class="portfolio-item" href="subjects/EngineeringDesign.php">
 						<div class="caption">
 							<div class="caption-content">
 								<div class="h2">工程設計</div>
@@ -162,7 +162,7 @@
             <!-- dt END -->
             <!-- lt: Learning and Technology -->
 				<div class="col-lg-6 index_all index_lt">
-					<a class="portfolio-item" href="subjects/InternetIntro.html">
+					<a class="portfolio-item" href="subjects/InternetIntro.php">
 						<div class="caption">
 							<div class="caption-content">
 								<div class="h2">網際網路概論</div>
@@ -175,7 +175,7 @@
             <!-- lt END -->
             <!-- cs: Computer Science Double Major -->
 				<div class="col-lg-6 index_all index_cs">
-					<a class="portfolio-item" href="subjects/ComputerProgramming.html">
+					<a class="portfolio-item" href="subjects/ComputerProgramming.php">
 						<div class="caption">
 							<div class="caption-content">
 								<div class="h2">程式設計</div>
@@ -186,7 +186,7 @@
 					</a>
 				</div>
 				<div class="col-lg-6 index_all index_cs">
-					<a class="portfolio-item" href="subjects/Calculus.html">
+					<a class="portfolio-item" href="subjects/Calculus.php">
 						<div class="caption">
 							<div class="caption-content">
 								<div class="h2">微積分</div>

@@ -20,7 +20,6 @@
 	<link href="../css/customDefined.css" rel="stylesheet">
     
     <!-- Custom JS-->
-    <script src="../js/includeHTML.js"></script>
     <script src="../js/tagSwitcher.js"></script>
     <script src="../js/subMenu.js"></script>
 	
@@ -48,55 +47,84 @@
 	
 <body id="page-top">
     <!-- Home Button-->
-	<a class="home-toggle rounded" href="../index.html">
+	<a class="home-toggle rounded" href="../">
 		<i class="fas fa-home"></i>
 	</a>
 	<!-- Navigation -->
 	<a class="menu-toggle rounded" href="#">
 		<i class="fas fa-bars"></i>
 	</a>
-	<nav id="sidebar-wrapper" w3-include-html="../templates/sidebar.html"></nav>
+	<?php include("./templates/sidebar.php"); ?>
 	
 	<!-- Header -->
 	<header class="masthead d-flex">
-        <div class="container text-center my-auto col-lg-4 col-sm-10" id="userRegister">
-			<h1 class="mb-1 ">註冊</h1>
+        <!-- login -->
+		<div class="container text-center my-auto col-lg-4 col-sm-10" id="userLogin">
+			<h1 class="mb-1 ">登入</h1>
 			<h3 class="mb-5">
 				<em></em>
 			</h3>
             <form>
               <div class="form-group">
-                <label for="user_name">
-                  <b class="h3">暱稱</b>
-                </label>
-                <input type="text" class="form-control" id="user_name" aria-describedby="user_name" placeholder="暱稱" required="1">
-              </div>
-              <div class="form-group">
                 <label for="user_account">
                   <b class="h3">學號</b>
+                  <span id="user_account_required" style="display: none;">
+                    <b style="color: red;"><br>請輸入學號</b>
+                  </span>
                 </label>
                 <input type="text" class="form-control" id="user_account" aria-describedby="user_account" placeholder="學號" required="1">
               </div>
               <div class="form-group">
                 <label for="user_pwd">
                   <b class="h3">密碼</b>
+                  <span id="user_pwd_required" style="display: none;">
+                    <b style="color: red;"><br>請輸入密碼</b>
+                  </span>
                 </label>
                 <input type="text" class="form-control" id="user_pwd" placeholder="密碼" required="1">
+              </div>
+              <a class="btn btn-danger btn-lg mr-2" href="#" role="button" onclick="forgotPass();">忘記密碼</a>
+              <a class="btn btn-success btn-lg ml-2" href="#" role="button" type="submit">登入</a>
+            </form>
+		</div>
+        <!-- forgotPass -->
+		<div class="container text-center my-auto col-lg-4 col-sm-10" id="userForgotPass" style="display: none;">
+			<h1 class="mb-1 ">忘記密碼</h1>
+			<h3 class="mb-5">
+				<em></em>
+			</h3>
+            <form>
+              <div class="form-group">
+                <label for="user_account_recovery">
+                  <b class="h3">學號</b>
+                </label>
+                <input type="text" class="form-control" id="user_account_recovery" aria-describedby="user_account_recovery" placeholder="學號" required="1">
               </div>
               <div class="form-group">
                 <label for="user_email">
                   <b class="h3">電子郵件</b>
                 </label>
-                <input type="text" class="form-control" id="user_email" placeholder="電子郵件" required="1">
+                <input type="text" class="form-control" id="user_email" placeholder="密碼" required="1">
               </div>
-              <a class="btn btn-success btn-lg" href="#" role="button" type="submit">註冊</a>
+              <a class="btn btn-dark btn-lg mr-2" href="#" role="button" onClick="noForgotPass();">返回</a>
+              <a class="btn btn-danger btn-lg mr-2" href="#" role="button" type="submit">重設密碼</a>
             </form>
 		</div>
 		<div class="overlay"></div>
+        <script>
+            function forgotPass() {
+                document.getElementById("userLogin").style.display = "none";
+                document.getElementById("userForgotPass").style.display = "block";
+            }
+            function noForgotPass() {
+                document.getElementById("userForgotPass").style.display = "none";
+                document.getElementById("userLogin").style.display = "block";
+            }
+        </script>
 	</header>
     
 	<!-- Footer -->
-	<footer class="footer text-center" w3-include-html="../templates/footer.html" style="background-color: #ffc107;"></footer>
+	<?php include("./templates/footer.php"); ?>
 	
 	<!-- Scroll to Top Button--> 
 	<a class="scroll-to-top rounded js-scroll-trigger" href="#page-top"> <i class="fas fa-angle-up"></i> </a> 

@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<title>程式設計 - 科技系懶人包</title>
+	<title>微積分 - 科技系懶人包</title>
 
 	<!-- Bootstrap Core CSS -->
 	<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -20,7 +20,6 @@
 	<link href="../css/customDefined.css" rel="stylesheet">
     
     <!-- Custom JS-->
-    <script src="../js/includeHTML.js"></script>
     <script src="../js/tagSwitcher.js"></script>
     <script src="../js/subMenu.js"></script>
 	
@@ -34,10 +33,11 @@
         gtag('config', 'G-HP1QM4Q74D');
     </script>
 	
-	<!-- Style -->
+	<!-- Onpage Style -->
 	<style>
 		header {
-			background-image: url(../img/subjects/ComputerProgramming/titleBG.jpg) !important;
+			background-image: url(../img/subjects/Calculus/titleBG.jpg) !important;
+			background-blend-mode: darken soft-light;
 			color: #ffffff;
 			text-shadow: 2px 2px black;
 		}
@@ -46,77 +46,65 @@
 	
 <body id="page-top">
 	<!-- Home Button-->
-	<a class="home-toggle rounded" href="../index.html">
+	<a class="home-toggle rounded" href="../">
 		<i class="fas fa-home"></i>
 	</a>
 	<!-- Navigation --> 
 	<a class="menu-toggle rounded" href="#">
 		<i class="fas fa-bars"></i>
 	</a>
-	<nav id="sidebar-wrapper" w3-include-html="../templates/sidebar.html"></nav>
+	<?php include("./templates/sidebar.php"); ?>
 	
 	<!-- Header -->
 	<header class="masthead d-flex">
 		<div class="container text-center my-auto">
-			<h1 class="mb-1">程式設計</h1>
+			<h1 class="mb-1">微積分</h1>
 			<h3 class="mb-5">
-				<em>雙主修資工的你，該看一下吧</em>
+				<em>微積分變危機了？沒關係，我也是。</em>
 			</h3>
             <div class="tagBtnGroup">
-    			<a class="btn btn-primary btn-xl js-scroll-trigger" href="#links">課程常用網頁連結</a>
-                <a class="btn btn-primary btn-xl js-scroll-trigger" href="#recommend">推薦學習內容</a>
+    			<a class="btn btn-primary btn-xl js-scroll-trigger" href="#downloads">H...Help...</a>
             </div>
 		</div>
 		<div class="overlay"></div>
 	</header>
 	
-	<!-- links -->
-	<section class="content-section bg-light" id="links">
+	<!-- downloads -->
+	<section class="content-section bg-light" id="downloads">
 		<div class="container text-center">
 			<div class="row">
-				<div class="col-lg-10 mx-auto">
-					<h2>課程常用網頁連結</h2>
-					<p class="lead mb-5">
-						最需要的，最重要的
-					</p>
+				<div class="col-lg-12 mx-auto">
+					<h2 class="mb-5">考古題下載</h2>
                     <div class="tagBtnGroup">
-    					<a class="btn btn-dark btn-xl js-scroll-trigger" href="https://sites.google.com/gapps.ntnu.edu.tw/cpi" target="_blank">
-	    					課程網頁
-		    			</a>
-			    		<a class="btn btn-dark btn-xl js-scroll-trigger" href="https://noj.tw/" target="_blank">
-				    		作業繳交：Normal-OJ
-					    </a>
+					    <a class="btn btn-primary btn-xl" href="https://bit.ly/3vqir40" target="_blank">微乙（一）期中考</a>
+					    <a class="btn btn-primary btn-xl" href="https://bit.ly/2Ra3PXy" target="_blank">微乙（一）期末考</a>
+					    <a class="btn btn-primary btn-xl" href="https://bit.ly/2R9FAbY" target="_blank">微乙（二）期中考</a>
+					    <a class="btn btn-primary btn-xl" href="https://bit.ly/3vsQskm" target="_blank">微乙（二）期末考</a>
                     </div>
-				</div>
+                </div>
 			</div>
 		</div>
 	</section>
     
-    <!-- Call to Action -->
-    <section class="content-section bg-primary text-white" id="recommend">
-    	<div class="container text-center">
-    		<h2>推薦學習內容</h2>
-            <p class="lead mb-5">
-            	看一下，或許能解決問題<br>不能解決，就看兩次吧XD
-            </p>
-            <div class="tagBtnGroup">
-                <a class="btn btn-xl btn-light" href="https://bit.ly/3xUb3jz" target="_blank">
-                    經驗傳承：<br>程式設計修課心得
-                </a>
-    		    <a class="btn btn-xl btn-light" href="https://ocw.nthu.edu.tw/ocw/index.php?page=course&cid=134&" target="_blank">
-                    清大開放式課程：<br>計算機程式設計（一）
-                </a>
-                <a class="btn btn-xl btn-light" href="https://hulitw.medium.com/learn-coding-9c572c2fb2" target="_blank">
-                    推薦文章：<br>程式設計，要學的到底是什麼？
-                </a>
-            </div>
-        </div>
-    </section>
+<!--item template: copy this <section> to create a new content section
+	<section class="content-section bg-light" id="[section id]">
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-lg-12 mx-auto">
+					<h2 class="mb-5">[section name]</h2>
+                    <div class="tagBtnGroup">
+					    [section contents]
+                    </div>
+                </div>
+			</div>
+		</div>
+	</section>
+-->
 	
 	<!-- Footer -->
-	<footer class="footer text-center" w3-include-html="../templates/footer.html" style="background-color: #ffc107;"></footer>
+	<?php include("./templates/footer.php"); ?>
 	
-	<!-- Scroll to Top Button--> 
+	<!-- Scroll to Top Button-->
 	<a class="scroll-to-top rounded js-scroll-trigger" href="#page-top"> <i class="fas fa-angle-up"></i> </a> 
 	
 	<!-- Bootstrap core JavaScript --> 
@@ -128,7 +116,6 @@
 	
 	<!-- Custom scripts for this template --> 
 	<script src="../js/stylish-portfolio.min.js"></script>
-    <script>includeHTML();</script> <!--w3-include-html caller-->
 </body>
 </html>
 	

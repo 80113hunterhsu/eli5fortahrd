@@ -12,7 +12,7 @@
         </li>
             <li class="sidebar-nav-item"> <a class="js-scroll-trigger nav_dt" href="../subjects/LaserCut.php">雷射切割</a> </li>
             <li class="sidebar-nav-item"> <a class="js-scroll-trigger nav_dt" href="../subjects/Graphics.php">圖學</a> </li>
-            <li class="sidebar-nav-item hider"> <a class="js-scroll-trigger nav_dt" href="../subjects/EngineeringDesign.php">工程設計</a> </li>
+            <li class="sidebar-nav-item hider"> <a class="js-scroll-trigger nav_dt" href="./EngineeringDesign.php">工程設計</a> </li>
         <!--lt-->
         <li class="sidebar-nav-item"> 
             <a id="ltTrig" href="#nav_lt" onClick="navSub(1)"> 
@@ -36,8 +36,8 @@
         <hr>
         <!--------------------------------->
         <li class="sidebar-nav-item"> 
-            <a class="js-scroll-trigger" href="../user/login.php">登入</a>
-            <a class="js-scroll-trigger" href="../user/register.php">註冊</a>
+            <a class="js-scroll-trigger" href="./login.php">登入</a>
+            <a class="js-scroll-trigger" href="./register.php">註冊</a>
         </li>
 
         <hr>
