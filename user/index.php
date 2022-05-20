@@ -3,8 +3,17 @@
   $action = $_GET['action'];
   $action_list = array(
     "login" => "登入", 
+    "loginFailed" => "登入", 
     "register" => "註冊", 
-    "forgetPW" => "忘記密碼"
+    "forgetPW" => "忘記密碼", 
+    "welcome" => "帳號管理"
+  );
+  $load_list = array(
+    "login" => "login", 
+    "loginFailed" => "login", 
+    "register" => "register", 
+    "forgetPW" => "forgetPW", 
+    "welcome" => "account"
   );
 ?>
 <html lang="en">
@@ -66,7 +75,7 @@
 	
 	<!-- Header -->
 	<header class="masthead d-flex">
-    <?php include("./templates/sections/" . $action . ".php"); ?>
+    <?php include("./templates/sections/" . $load_list[$action] . ".php"); ?>
 		<div class="overlay"></div>
 	</header>
     
@@ -85,7 +94,6 @@
 	
 	<!-- Custom scripts for this template --> 
 	<script src="../js/stylish-portfolio.min.js"></script>
-    <script>includeHTML();</script> <!--w3-include-html caller-->
 </body>
 </html>
 	
