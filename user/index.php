@@ -3,15 +3,19 @@
   $action = $_GET['action'];
   $action_list = array(
     "login" => "登入", 
-    "loginFailed" => "登入", 
+    "login_failed" => "登入", 
     "register" => "註冊", 
+    "pwd_incorrect" => "註冊", 
+    "user_exists" => "註冊", 
     "forgetPW" => "忘記密碼", 
     "welcome" => "帳號管理"
   );
   $load_list = array(
     "login" => "login", 
-    "loginFailed" => "login", 
+    "login_failed" => "login", 
     "register" => "register", 
+    "pwd_incorrect" => "register", 
+    "user_exists" => "register", 
     "forgetPW" => "forgetPW", 
     "welcome" => "account"
   );
@@ -55,9 +59,9 @@
 		header {
 			/*background-image: url(img/indexBG.jpg) !important;*/
 			background-size: 100%; 
-			color: #ffffff;
+			color: #000;
 			opacity: 0.85;
-			text-shadow: 2px 2px black;
+			*text-shadow: 2px 2px black;
 		}
 	</style>
 </head>

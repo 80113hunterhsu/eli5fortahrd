@@ -1,7 +1,6 @@
 @import url('https://res.cloudinary.com/eli5fortahrd/raw/upload/font/jf-openhuninn-1.1.ttf');
 body, h1, h2, h3, h4, h5, h6, a, .btn {
   font-family: "jf-openhuninn-1.1" !important;
-  
 }
 .my-auto {
 	margin-top: auto !important;
@@ -26,6 +25,15 @@ body, h1, h2, h3, h4, h5, h6, a, .btn {
 }
 .hider {
     display: none !important;
+}
+header {
+    background-size: cover !important; 
+    color: #000 !important;
+    opacity: 0.85 !important;
+    text-shadow: none !important;
+}
+.form-group input {
+    font-size: 1.3rem;
 }
 
 /*sidebar.html*/
