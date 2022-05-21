@@ -1,4 +1,5 @@
 <?php 
+    session_start();
     // load db connection
     include("../../../database/serverConn.php");
 
@@ -18,12 +19,18 @@
         // echo "username: " . $row['username'] . "<br>" . "password: " . $row['password'] . "<br>" . "email: " . $row['email'];
         if (password_verify($password, $db_password)) {
             // echo "in";
+            $_SESSION['loginStat'] = "1";
+            $_SESSION['name'] = $row['name'];
+            $_SESSION['username'] = "$username";
             header("Location: ../../?action=welcome");
+        }
+        else {
+            header("Location: ../../?action=login_failed");
         }
     }
     else {
         header("Location: ../../?action=login_failed");
     }
 
-    mysqli_close($conn);
+    mysqli_close($db);
 ?>

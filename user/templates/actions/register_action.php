@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    
     // load db connection
     include("../../../database/serverConn.php");
 
@@ -22,6 +24,9 @@
             $cmd_addUser = "INSERT INTO user (username, password, name, email) VALUES ('$username', '$password', '$name', '$email')";
             $addUser = mysqli_query($db, $cmd_addUser);
             if ($addUser) {
+                $_SESSION['loginStat'] = "1";
+                $_SESSION['name'] = "$name";
+                $_SESSION['username'] = "$username";
                 header("Location: ../../?action=welcome");
             }
         }
@@ -30,4 +35,5 @@
         header("Location: ../../?action=pwd_incorrect");
     }
 
+    mysqli_close($db);
 ?>

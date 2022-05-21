@@ -35,9 +35,13 @@
 
         <hr>
         <!--------------------------------->
-        <li class="sidebar-nav-item"> 
+        <li class="sidebar-nav-item <?php if (isset($_SESSION['loginStat'])) echo("hider")?>"> 
             <a class="js-scroll-trigger" href="?action=login">登入</a>
             <a class="js-scroll-trigger" href="?action=register">註冊</a>
+        </li>
+        <li class="sidebar-nav-item <?php if (!(isset($_SESSION['loginStat']))) echo("hider")?>"> 
+            <a class="js-scroll-trigger" href="?action=welcome">您好，<?php echo $_SESSION['name']; ?></a>
+            <a class="js-scroll-trigger" href="?action=logout">登出</a>
         </li>
 
         <hr>

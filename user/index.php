@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <?php
+  session_start();
+
   $action = $_GET['action'];
+  if ($action == "logout") {
+    header("Location: ./templates/actions/logout_action.php");
+  }
   $action_list = array(
     "login" => "登入", 
     "login_failed" => "登入", 
     "register" => "註冊", 
     "pwd_incorrect" => "註冊", 
     "user_exists" => "註冊", 
-    "forgetPW" => "忘記密碼", 
-    "welcome" => "帳號管理"
+    "pwd_rescue" => "忘記密碼", 
+    "welcome" => "帳號管理", 
+    "pwd_modify" => "修改密碼"
   );
   $load_list = array(
     "login" => "login", 
@@ -16,8 +22,9 @@
     "register" => "register", 
     "pwd_incorrect" => "register", 
     "user_exists" => "register", 
-    "forgetPW" => "forgetPW", 
-    "welcome" => "account"
+    "pwd_rescue" => "pwd_rescue", 
+    "welcome" => "account", 
+    "pwd_modify" => "pwd_modify"
   );
 ?>
 <html lang="en">

@@ -4,13 +4,13 @@
 </style>
 <div class="container text-center my-auto col-lg-4 col-10" id="userRegister">
     <h1 class="mb-1 ">註冊</h1>
-    <h3 class="mb-5">
+    <h4 class="mb-5">
         <?php
             if ($action == 'user_exists') {
                 echo "此學號已註冊，是否嘗試<a href='?action=login'>登入</a>？";
             }
         ?>
-    </h3>
+    </h4>
     <form action="./templates/actions/register_action.php" method="POST">
         <div class="form-group">
             <input type="text" class="form-control" id="user_name" name="user_name" aria-describedby="user_name" placeholder="暱稱" required="1">

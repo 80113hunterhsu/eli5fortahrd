@@ -1,4 +1,6 @@
 <?php
+session_start();
+echo $_SESSION['username'];
 // Include config file
 //require_once "config.php";
  

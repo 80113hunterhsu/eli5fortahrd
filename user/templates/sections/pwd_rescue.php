@@ -1,9 +1,9 @@
 <!-- forgotPass -->
 <div class="container text-center my-auto col-lg-4 col-sm-10" id="userForgotPass">
     <h1 class="mb-1 ">忘記密碼</h1>
-    <h3 class="mb-5">
+    <h4 class="mb-5">
         <em></em>
-    </h3>
+    </h4>
     <form>
         <div class="form-group">
         <label for="user_account_recovery">
