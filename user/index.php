@@ -3,27 +3,35 @@
   session_start();
 
   $action = $_GET['action'];
+  // page redirection
+  if (!(isset($_SESSION['loginStat']))) {
+    $_SESSION['loginStat'] = "not_logged_in";
+  }
   if ($action == "logout") {
     header("Location: ./templates/actions/logout_action.php");
   }
+  else if (($action == "login" || $action == "register" || $action == "pwd_rescue") && ($_SESSION['loginStat'] == "success")) {
+    header("Location: ./?action=welcome");
+  }
+  else if (($action == "welcome" || $action == "account_manage" || $action == "pwd_modify") && ($_SESSION['loginStat'] == "not_logged_in")) {
+    header("Location: ./?action=login");
+  }
+  // page title
   $action_list = array(
     "login" => "登入", 
-    "login_failed" => "登入", 
     "register" => "註冊", 
-    "pwd_incorrect" => "註冊", 
-    "user_exists" => "註冊", 
     "pwd_rescue" => "忘記密碼", 
     "welcome" => "帳號管理", 
+    "account_manage" => "帳號資料修改", 
     "pwd_modify" => "修改密碼"
   );
+  // page loader path
   $load_list = array(
     "login" => "login", 
-    "login_failed" => "login", 
     "register" => "register", 
-    "pwd_incorrect" => "register", 
-    "user_exists" => "register", 
     "pwd_rescue" => "pwd_rescue", 
     "welcome" => "account", 
+    "account_manage" => "account_manage", 
     "pwd_modify" => "pwd_modify"
   );
 ?>

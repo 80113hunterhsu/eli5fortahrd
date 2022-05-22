@@ -1,13 +1,18 @@
 <!-- register -->
-<style>
-    
-</style>
-<div class="container text-center my-auto col-lg-4 col-10" id="userRegister">
+<div class="container text-center my-auto col-lg-6 col-10" id="userRegister">
     <h1 class="mb-1 ">註冊</h1>
     <h4 class="mb-5">
         <?php
-            if ($action == 'user_exists') {
-                echo "此學號已註冊，是否嘗試<a href='?action=login'>登入</a>？";
+            if (!(isset($_SESSION['register']))) {
+                $_SESSION['register'] = "";
+            }
+            else if ($_SESSION['register'] == 'user_exists') {
+                echo "<p class='h4 m-4' style='color: red;'>此學號已註冊，是否嘗試<a href='?action=login'>登入</a></p>";
+                unset($_SESSION['register']);
+            }
+            else if ($_SESSION['register'] == 'pwd_incorrect') {
+                echo "<p class='h4 m-4' style='color: red;'>請重新確認密碼</p>";
+                unset($_SESSION['register']);
             }
         ?>
     </h4>

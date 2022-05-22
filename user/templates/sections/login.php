@@ -1,10 +1,15 @@
 <!-- login -->
-<div class="container text-center my-auto col-lg-4 col-sm-10" id="userLogin">
+<div class="container text-center my-auto col-lg-6 col-sm-10" id="userLogin">
     <h1 class="mb-1 ">登入</h1>
     <h4 class="mb-5">
         <?php
-            if ($action == 'login_failed') {
-                echo "登入資訊錯誤，請重新嘗試";
+            if ($_SESSION['loginStat'] == 'no_account') {
+                echo "<p class='h4 m-4' style='color: red;'>查無此學號，請重新輸入</p>";
+                unset($_SESSION['loginStat']);
+            }
+            else if ($_SESSION['loginStat'] == 'wrong_pwd') {
+                echo "<p class='h4 m-4' style='color: red;'>密碼錯誤，請重新輸入</p>";
+                unset($_SESSION['loginStat']);
             }
         ?>
     </h4>
