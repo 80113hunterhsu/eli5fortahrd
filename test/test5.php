@@ -1,8 +1,8 @@
-<?php
+<?php 
     $servername = "localhost";
-    $username = "test_user";
-    $password = "test_password";
     $dbname = "testDB";
+    $username = "40871218H";
+    $password = "Hunter890913";
 
     $db = mysqli_connect($servername, $username, $password, $dbname);
     mysqli_set_charset($db, 'utf8mb4');
@@ -15,5 +15,5 @@
         echo '<script>' . 'console.log("'.$msg.'");' . '</script>';
     }
 
-    consoleLog("Connected to $dbname successfully");
+    echo "<script>console.log('Connected to $dbname successfully');</script>";
 ?>
