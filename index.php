@@ -127,123 +127,26 @@
 				</div>
             -->
             <!-- dt: Design and Technology -->
-				<div class="col-lg-6 index_all index_dt">
-					<a class="portfolio-item" href="subjects/LaserCut.php">
-						<div class="caption">
-							<div class="caption-content">
-								<div class="h2">雷射切割</div>
-								<p class="mb-0">喜歡動手動腳？來試試手感吧！</p>
-							</div>
-						</div>
-						<img class="img-fluid" src="img/portfolio/LaserCut.jpg" alt="LaserCut">
-					</a>
-				</div>
-                <div class="col-lg-6 index_all index_dt">
-					<a class="portfolio-item" href="subjects/Graphics.php">
-						<div class="caption">
-							<div class="caption-content">
-								<div class="h2">圖學</div>
-								<p class="mb-0">這裡沒有塗鴉，只有真理！</p>
-							</div>
-						</div>
-						<img class="img-fluid" src="img/portfolio/Graphics.jpg" alt="Graphics">
-					</a>
-				</div>
-                <div class="col-lg-6 index_all index_dt hider">
-					<a class="portfolio-item" href="subjects/EngineeringDesign.php">
-						<div class="caption">
-							<div class="caption-content">
-								<div class="h2">工程設計</div>
-								<p class="mb-0">做就對了，想那麼多幹什麼？</p>
-							</div>
-						</div>
-						<img class="img-fluid" src="img/portfolio/EngineeringDesign.jpg" alt="EngineeringDesign">
-					</a>
-				</div>
+				<?php include("./templates/sections/home_link/link-laser_cut.php"); ?>
+                <?php include("./templates/sections/home_link/link-graphics.php"); ?>
+                <?php include("./templates/sections/home_link/link-engineering_design.php"); ?>
             <!-- dt END -->
             <!-- lt: Learning and Technology -->
-				<div class="col-lg-6 index_all index_lt">
-					<a class="portfolio-item" href="subjects/InternetIntro.php">
-						<div class="caption">
-							<div class="caption-content">
-								<div class="h2">網際網路概論</div>
-								<p class="mb-0">看課本想睡覺？那來看看這裡！</p>
-							</div>
-						</div>
-						<img class="img-fluid" src="img/portfolio/InternetIntro.jpg" alt="InternetIntro">
-					</a>
-				</div>
+				<?php include("./templates/sections/home_link/link-internet_introduction.php"); ?>
             <!-- lt END -->
             <!-- cs: Computer Science Double Major -->
-				<div class="col-lg-6 index_all index_cs">
-					<a class="portfolio-item" href="subjects/ComputerProgramming.php">
-						<div class="caption">
-							<div class="caption-content">
-								<div class="h2">程式設計</div>
-								<p class="mb-0">雙主修資工的你，該看一下吧</p>
-							</div>
-						</div>
-						<img class="img-fluid" src="img/portfolio/ComputerProgramming.jpg" alt="ComputerProgramming">
-					</a>
-				</div>
-				<div class="col-lg-6 index_all index_cs">
-					<a class="portfolio-item" href="subjects/Calculus.php">
-						<div class="caption">
-							<div class="caption-content">
-								<div class="h2">微積分</div>
-								<p class="mb-0">微積分變危機了？沒關係，我也是。</p>
-							</div>
-						</div>
-						<img class="img-fluid" src="img/portfolio/Calculus.jpg" alt="Calculus">
-					</a>
-				</div>
+				<?php include("./templates/sections/home_link/link-computer_programming.php"); ?>
+				<?php include("./templates/sections/home_link/link-calculus.php"); ?>
             <!-- cs END -->
 			</div>
 		</div>
 	</section>
 	
-    <!-- Advice and Resource Upload -->
-    <section class="content-section bg-primary text-white">
-    	<div class="container text-center">
-    		<span id="helpTAHRDtitle">想為科技系盡一份心力嗎？</span>
-            <p id="helpTAHRDsubtitle" class="mb-4">歡迎分享懶人包主題或是填寫回饋！</p>
-            <div class="tagBtnGroup mb-5">
-    		    <a class="btn btn-xl btn-light" href="https://forms.gle/tN4t4k7mt91NMgQ4A" target="_blank">懶人包主題提供</a>
-                <a class="btn btn-xl btn-dark" href="https://forms.gle/oXptZdPXLTaC2wiN7" target="_blank">意見回饋</a>
-            </div>
-        </div>
-    </section>
+    <?php include("./templates/sections/advise_resource.php"); ?>
     
-    <!-- About -->
-    <section class="content-section bg-light" id="about">
-    	<div class="container text-center">
-    		<div class="row">
-    			<div class="col-lg-10 mx-auto">
-                    <p id="thankYouNote">特別感謝</p><br>
-    				<span class="lead mb-5">
-                        - 學習資料提供 - <br>
-                        陳致愷、陳昱綸、蘇柏霖、柯宗佑
-                        <hr>
-                        - 網站架設建議 - <br>
-                        丁玉良老師、徐翊堯同學：）<br>
-                        以及參與109-2 數位學習方法與策略的各位同學們！
-                    </span>
-    		    </div>
-        	</div>
-        </div>
-    </section>
+    <?php include("./templates/sections/about.php"); ?>
     
-    <!-- Github Page -->
-    <section class="content-section bg-primary text-white">
-    	<div class="container text-center">
-    		<span id="joinUsTitle">你會寫網站嗎？</span>
-            <p id="joinUsSubtitle" class="mb-4">到我們的GitHub Page晃晃吧～</p>
-            <div class="tagBtnGroup mb-5">
-    		    <a class="btn btn-xl btn-light" href="https://github.com/80113hunterhsu/eli5fortahrd" target="_blank">GitHub</a>
-                <a class="btn btn-xl btn-dark" href="https://forms.gle/wVsRpPNTjnZMMeMZ6" target="_blank">加入我們</a>
-            </div>
-        </div>
-    </section>
+    <?php include("./templates/sections/github.php"); ?>
     
 	<!-- Footer -->
 	<?php include("./templates/footer.php"); ?>
