@@ -1,3 +1,16 @@
+<?php
+	session_start();
+
+    $title = $_GET['title'];
+    $title_list = array(
+        "calculus" => "微積分", 
+        "computer_programming" => "程式設計", 
+        "engineering_design" => "工程設計", 
+        "graphics" => "圖學", 
+        "internet_introduction" => "網際網路概論", 
+        "laser_cut" => "雷射切割"
+    );
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +18,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<title>微積分 - 科技系懶人包</title>
+	<title><?php echo $title_list[$title]; ?> - 科技系懶人包</title>
 
 	<!-- Bootstrap Core CSS -->
 	<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -33,13 +46,25 @@
         gtag('config', 'G-HP1QM4Q74D');
     </script>
 	
-	<!-- Onpage Style -->
+	<!-- Style -->
 	<style>
 		header {
-			background-image: url(../img/subjects/Calculus/titleBG.jpg) !important;
-			background-blend-mode: darken soft-light;
-			color: #ffffff;
-			text-shadow: 2px 2px black;
+			background-size: cover;
+			background-position: top right;
+			color: #ffffff !important;
+			text-shadow: 2px 2px black !important;
+		}
+        header:before {
+            content: "";
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+		#pageTitle {
+			z-index: 999;
 		}
 	</style>
 </head>
@@ -55,56 +80,14 @@
 	</a>
 	<?php include("./templates/sidebar.php"); ?>
 	
-	<!-- Header -->
-	<header class="masthead d-flex">
-		<div class="container text-center my-auto">
-			<h1 class="mb-1">微積分</h1>
-			<h3 class="mb-5">
-				<em>微積分變危機了？沒關係，我也是。</em>
-			</h3>
-            <div class="tagBtnGroup">
-    			<a class="btn btn-primary btn-xl js-scroll-trigger" href="#downloads">H...Help...</a>
-            </div>
-		</div>
-		<div class="overlay"></div>
-	</header>
-	
-	<!-- downloads -->
-	<section class="content-section bg-light" id="downloads">
-		<div class="container text-center">
-			<div class="row">
-				<div class="col-lg-12 mx-auto">
-					<h2 class="mb-5">考古題下載</h2>
-                    <div class="tagBtnGroup">
-					    <a class="btn btn-primary btn-xl" href="https://bit.ly/3vqir40" target="_blank">微乙（一）期中考</a>
-					    <a class="btn btn-primary btn-xl" href="https://bit.ly/2Ra3PXy" target="_blank">微乙（一）期末考</a>
-					    <a class="btn btn-primary btn-xl" href="https://bit.ly/2R9FAbY" target="_blank">微乙（二）期中考</a>
-					    <a class="btn btn-primary btn-xl" href="https://bit.ly/3vsQskm" target="_blank">微乙（二）期末考</a>
-                    </div>
-                </div>
-			</div>
-		</div>
-	</section>
+	<!-- dynamic loader for subjects -->
+    <?php include("./templates/sections/" . $title . ".php") ?>
+    <!-- dynamic loader for subjects -->
     
-<!--item template: copy this <section> to create a new content section
-	<section class="content-section bg-light" id="[section id]">
-		<div class="container text-center">
-			<div class="row">
-				<div class="col-lg-12 mx-auto">
-					<h2 class="mb-5">[section name]</h2>
-                    <div class="tagBtnGroup">
-					    [section contents]
-                    </div>
-                </div>
-			</div>
-		</div>
-	</section>
--->
-	
 	<!-- Footer -->
 	<?php include("./templates/footer.php"); ?>
 	
-	<!-- Scroll to Top Button-->
+	<!-- Scroll to Top Button--> 
 	<a class="scroll-to-top rounded js-scroll-trigger" href="#page-top"> <i class="fas fa-angle-up"></i> </a> 
 	
 	<!-- Bootstrap core JavaScript --> 

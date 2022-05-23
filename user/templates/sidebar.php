@@ -10,9 +10,9 @@
                 <i class="fa fa-minus" id="dtOff" aria-hidden="true" style="display: none;"></i> 
             </a> 
         </li>
-            <li class="sidebar-nav-item"> <a class="js-scroll-trigger nav_dt" href="../subjects/LaserCut.php">雷射切割</a> </li>
-            <li class="sidebar-nav-item"> <a class="js-scroll-trigger nav_dt" href="../subjects/Graphics.php">圖學</a> </li>
-            <li class="sidebar-nav-item hider"> <a class="js-scroll-trigger nav_dt" href="./EngineeringDesign.php">工程設計</a> </li>
+            <li class="sidebar-nav-item"> <a class="js-scroll-trigger nav_dt" href="../subject/?title=laser_cut">雷射切割</a> </li>
+            <li class="sidebar-nav-item"> <a class="js-scroll-trigger nav_dt" href="../subject/?title=graphics">圖學</a> </li>
+            <li class="sidebar-nav-item hider"> <a class="js-scroll-trigger nav_dt" href="./subject/?title=engineer_design">工程設計</a> </li>
         <!--lt-->
         <li class="sidebar-nav-item"> 
             <a id="ltTrig" href="#nav_lt" onClick="navSub(1)"> 
@@ -21,7 +21,7 @@
                 <i class="fa fa-minus" id="ltOff" aria-hidden="true" style="display: none;"></i> 
             </a> 
         </li>
-            <li class="sidebar-nav-item"> <a class="js-scroll-trigger nav_lt" href="../subjects/InternetIntro.php">網際網路概論</a> </li>
+            <li class="sidebar-nav-item"> <a class="js-scroll-trigger nav_lt" href="../subject/?title=internet_introduction">網際網路概論</a> </li>
         <!--cs-->
         <li class="sidebar-nav-item"> 
             <a id="csTrig" href="#nav_cs" onClick="navSub(2)"> 
@@ -30,8 +30,8 @@
                 <i class="fa fa-minus" id="csOff" aria-hidden="true" style="display: none;"></i> 
             </a> 
         </li>
-            <li class="sidebar-nav-item"> <a class="js-scroll-trigger nav_cs" href="../subjects/ComputerProgramming.php">程式設計</a> </li>
-            <li class="sidebar-nav-item"> <a class="js-scroll-trigger nav_cs" href="../subjects/Calculus.php">微積分</a> </li>
+            <li class="sidebar-nav-item"> <a class="js-scroll-trigger nav_cs" href="../subject/?title=computer_programming">程式設計</a> </li>
+            <li class="sidebar-nav-item"> <a class="js-scroll-trigger nav_cs" href="../subject/?title=calculus">微積分</a> </li>
 
         <hr>
         <!--------------------------------->
