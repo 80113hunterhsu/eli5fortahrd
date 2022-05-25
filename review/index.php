@@ -1,24 +1,18 @@
-<?php
-	session_start();
-
-    $title = $_GET['title'];
-    $title_list = array(
-        "calculus" => "微積分", 
-        "computer_programming" => "程式設計", 
-        "engineering_design" => "工程設計", 
-        "graphics" => "圖學", 
-        "internet_introduction" => "網際網路概論", 
-        "laser_cut" => "雷射切割"
-    );
-?>
 <!DOCTYPE html>
+<?php
+  session_start();
+
+  if (!(isset($_SESSION['loginStat']))) {
+    $_SESSION['loginStat'] = "not_logged_in";
+  }
+?>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<title><?php echo $title_list[$title]; ?> - 科技系懶人包</title>
+	<title>課程評論 - 科技系懶人包</title>
 
 	<!-- Bootstrap Core CSS -->
 	<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -46,38 +40,50 @@
         gtag('config', 'G-HP1QM4Q74D');
     </script>
 	
-	<!-- Style -->
+	<!-- Onpage Style -->
 	<style>
 		header {
-			background-size: cover;
-			background-position: top right;
-			color: #ffffff !important;
-			text-shadow: 2px 2px black !important;
-		}
-        header:before {
-            content: "";
-            background: rgba(0, 0, 0, 0.6);
-            position: absolute;
-            bottom: 0;
-            top: 0;
-            left: 0;
-            right: 0;
-        }
-		#pageTitle {
-			z-index: 999;
+			/*background-image: url(img/indexBG.jpg) !important;*/
+			background-size: 100%; 
+			color: #000;
+			opacity: 0.85;
+			*text-shadow: 2px 2px black;
 		}
 	</style>
 </head>
 	
 <body id="page-top">
-	<!-- Home Button-->
-	<a class="home-toggle rounded" href="../"> <i class="fas fa-home"></i> </a>
-	<!-- Navigation --> 
-	<a class="menu-toggle rounded" href="#"> <i class="fas fa-bars"></i> </a>
+    <!-- Home Button-->
+	<a class="home-toggle rounded" href="../">
+		<i class="fas fa-home"></i>
+	</a>
+	<!-- Navigation -->
+	<a class="menu-toggle rounded" href="#">
+		<i class="fas fa-bars"></i>
+	</a>
 	<?php include("./templates/sidebar.php"); ?>
 	
-	<!-- dynamic loader for subjects -->
-    <?php include("./templates/sections/" . $title . ".php") ?>
+	<!-- Header -->
+	<header class="masthead d-flex">
+        <!-- account -->
+        <div class="container text-center my-auto col-10" id="userLogin">
+            <h1 class="mb-1 ">課程評論</h1>
+            <h3 class="mb-5"></h3>
+            <div class="tagBtnGroup">
+                <a class="btn btn-primary btn-lg m-2 <?php if ($_SESSION['loginStat'] != "success") echo("hider"); ?>" href="?action=new_review" role="button">我要寫評論</a>
+                <a class="btn btn-success btn-lg m-2 js-scroll-trigger" href="#reviews" role="button">看評論</a>
+            </div>
+        </div>
+		<div class="overlay"></div>
+	</header>
+
+    <!-- Call to Action -->
+    <section class="content-section bg-primary text-white" id="reviews">
+        <div class="container text-center">
+            <h2 class="mb-5">所有評論</h2>
+            <?php include("./templates/review_wrapper.php"); ?> 
+        </div>
+    </section>
     
 	<!-- Footer -->
 	<?php include("./templates/footer.php"); ?>

@@ -3,14 +3,7 @@
     <h1 class="mb-1 ">帳號管理</h1>
     <h3 class="mb-5">
         歡迎登入，<?php echo $_SESSION['name'] ?><br>
-        <a id="showEmail" href="#" onClick="showEmail();">檢視電子郵件</a>
-        <span id="emailSection" style="display: none;"><?php echo $_SESSION['email']; ?></span>
-        <script>
-            function showEmail() {
-                document.querySelector('#showEmail').style.display = 'none';
-                document.querySelector('#emailSection').style.display = 'inline';
-            }
-        </script>
+        <span id="emailSection"><?php echo $_SESSION['email']; ?></span>
         <?php
             // register success
             if (isset($_SESSION['register'])) {

@@ -94,16 +94,16 @@
                         [tag name (same as category name)]
                     </a>
                 -->
-			        <a id="indexTagger1" class="btn btn-primary btn-md js-scroll-trigger indexTag" href="#allContents1" onClick="getTag(0, 1)">
+			        <a id="indexTagger1" class="btn btn-primary btn-md js-scroll-trigger indexTag" href="#allContents" onClick="getTag(0, 1)">
                         所有分類
                     </a>
-                    <a id="indexTagger3" class="btn btn-dark btn-md js-scroll-trigger indexTag" href="#allContents2" onClick="getTag(0, 3)">
+                    <a id="indexTagger3" class="btn btn-dark btn-md js-scroll-trigger indexTag" href="#allContents" onClick="getTag(0, 3)">
                         設計與科技組
                     </a>
-                    <a id="indexTagger2" class="btn btn-dark btn-md js-scroll-trigger indexTag" href="#allContents3" onClick="getTag(0, 2)">
+                    <a id="indexTagger2" class="btn btn-dark btn-md js-scroll-trigger indexTag" href="#allContents" onClick="getTag(0, 2)">
                         學習與科技組
                     </a>
-                    <a id="indexTagger4" class="btn btn-dark btn-md js-scroll-trigger indexTag" href="#allContents4" onClick="getTag(0, 4)">
+                    <a id="indexTagger4" class="btn btn-dark btn-md js-scroll-trigger indexTag" href="#allContents" onClick="getTag(0, 4)">
                         資工系雙主修
                     </a>
                 </div>
@@ -127,16 +127,16 @@
 				</div>
             -->
             <!-- dt: Design and Technology -->
-				<?php include("./templates/sections/home_link/link-laser_cut.php"); ?>
-                <?php include("./templates/sections/home_link/link-graphics.php"); ?>
-                <?php include("./templates/sections/home_link/link-engineering_design.php"); ?>
+				<?php include("./templates/sections/home_links/link-laser_cut.php"); ?>
+                <?php include("./templates/sections/home_links/link-graphics.php"); ?>
+                <?php include("./templates/sections/home_links/link-engineering_design.php"); ?>
             <!-- dt END -->
             <!-- lt: Learning and Technology -->
-				<?php include("./templates/sections/home_link/link-internet_introduction.php"); ?>
+				<?php include("./templates/sections/home_links/link-internet_introduction.php"); ?>
             <!-- lt END -->
             <!-- cs: Computer Science Double Major -->
-				<?php include("./templates/sections/home_link/link-computer_programming.php"); ?>
-				<?php include("./templates/sections/home_link/link-calculus.php"); ?>
+				<?php include("./templates/sections/home_links/link-computer_programming.php"); ?>
+				<?php include("./templates/sections/home_links/link-calculus.php"); ?>
             <!-- cs END -->
 			</div>
 		</div>
