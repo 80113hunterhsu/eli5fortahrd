@@ -71,7 +71,7 @@
             <h3 class="mb-5"></h3>
             <div class="tagBtnGroup">
                 <a class="btn btn-primary btn-lg m-2 <?php if ($_SESSION['loginStat'] != "success") echo("hider"); ?>" href="?action=new_review" role="button">我要寫評論</a>
-                <a class="btn btn-success btn-lg m-2 js-scroll-trigger" href="#reviews" role="button">看評論</a>
+                <a class="btn btn-success btn-lg m-2 js-scroll-trigger" href="#reviews" role="button">我看看就好</a>
             </div>
         </div>
 		<div class="overlay"></div>
@@ -80,8 +80,11 @@
     <!-- Call to Action -->
     <section class="content-section bg-primary text-white" id="reviews">
         <div class="container text-center">
-            <h2 class="mb-5">所有評論</h2>
+            <h2 class="mb-5">
+                所有評論
+            </h2>
             <?php include("./templates/review_wrapper.php"); ?> 
+            
         </div>
     </section>
     
