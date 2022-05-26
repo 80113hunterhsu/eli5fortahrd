@@ -30,6 +30,11 @@
       $course_name = $currentCourse['course_name'];
     }
   }
+  else {
+    if ($_SESSION['loginStat'] != "success") {
+      header("Location: ../user/?action=login");
+    }
+  }
 ?>
 <html lang="en">
 <head>

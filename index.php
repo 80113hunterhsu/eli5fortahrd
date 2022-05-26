@@ -1,5 +1,10 @@
 <!DOCTYPE html>
-<?php session_start(); ?>
+<?php 
+	session_start(); 
+	if (!(isset($_SESSION['loginStat']))) {
+	  $_SESSION['loginStat'] = "not_logged_in";
+	}	
+?>
 <html lang="en">
 <head>
 	<meta charset="utf-8">

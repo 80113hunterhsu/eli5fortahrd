@@ -22,7 +22,7 @@
                 else {
                     $active = "";
                 }
-                echo("<a class='dropdown-item$active' href='?action=show&course=$row_course_id#reviews'>$row_course_name</a>");
+                echo("<a class='dropdown-item$active' href='?course=$row_course_id#reviews'>$row_course_name</a>");
             }
         ?>
     </div>
