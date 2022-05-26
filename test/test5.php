@@ -1,19 +1,8 @@
 <?php 
-    $servername = "localhost";
-    $dbname = "testDB";
-    $username = "40871218H";
-    $password = "Hunter890913";
-
-    $db = mysqli_connect($servername, $username, $password, $dbname);
-    mysqli_set_charset($db, 'utf8mb4');
-
-    if ($db -> connect_error) {
-        die("Connection failed: " . $db->connect_error);
-    }
-
-    function consoleLog($msg) {
-        echo '<script>' . 'console.log("'.$msg.'");' . '</script>';
-    }
-
-    echo "<script>console.log('Connected to $dbname successfully');</script>";
+    $test = "不各我年小化場：管變現合電屋沒！好遊人強日視的時友，只然能師！工快角？我定痛東一已細。全響人價分法報基日中用球都產劇重合心死飯不，市城簡人員了們級金？
+    山度情，天總落記性少，樂三氣要級民提林香準具使下會念機期修小要院大果影就！
+    望西們之場不果了認：我義光坐小、品的存學者？
+    黨真再定約呢型現大利可遊路新從民帶品是何水此安！我真面能解西，功化是受女中車主解像上收飛不師好星：那坡變成竟問品法原建合軍司，聲紀道年至臺出且史音男傳師功孩說難綠重童命請？接企布些這得有果了角值公用之氣合果根，望共回家呢康境？他排信站：是之造同負是線道麼地我；於字費燈爸物亮條去師得才嚴，會個另同政我。古在方劇相型；可無活愛就運，關早導美的單，境長知兒中水比有品港一作以聽西向分論被級高你法稱為寶女到以動王，意們。
+    進文華率起再因他華名的法病……父用大，市有腳西，藝否點她，的魚小生初自李。大先再樂公裡居步是就魚在慢密為國養現！高知倒已！明始手下不國育料、是存細濟會面木陽好供權出的們亞員，任話假全，角般排身似小看住升的、展念多明經以費式化：是產以？説說進文華率起再因他華名的法病……父用大亞員，任話假全，角般排身似小看住升的、展念說";
+    echo $test;
 ?>

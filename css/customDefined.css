@@ -32,7 +32,7 @@ header {
     opacity: 0.85 !important;
     text-shadow: none !important;
 }
-.form-group input {
+.form-group input, .form-group select, .form-group textarea {
     font-size: 1.3rem;
 }
 

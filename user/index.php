@@ -94,7 +94,7 @@
 	
 	<!-- Header -->
 	<header class="masthead d-flex">
-    <?php include("./templates/sections/" . $load_list[$action] . ".php"); ?>
+    	<?php include("./templates/sections/" . $load_list[$action] . ".php"); ?>
 		<div class="overlay"></div>
 	</header>
     
