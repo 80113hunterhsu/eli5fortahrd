@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    
     include("../../../../database/serverConn.php");
     $review_id = $_GET['review_id'];
     //echo $review_id;
