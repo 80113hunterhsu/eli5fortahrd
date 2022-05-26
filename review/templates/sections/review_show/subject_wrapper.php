@@ -20,7 +20,12 @@
             else {
                 echo "<h4 class='text-dark m-0'>查無評論或評分！</h4>";
             }
-            $course_score = $review_score_sum / (float)$review_count;
+            if ($review_count != 0) {
+                $course_score = $review_score_sum / (float)$review_count;
+            }
+            else {
+                $course_score = 0;
+            }
             $cmd_updateCourseScore = "UPDATE course SET course_score = '$course_score' WHERE course_id = '$course_id'";
             $updateCourseScore = mysqli_query($db, $cmd_updateCourseScore);
         ?>

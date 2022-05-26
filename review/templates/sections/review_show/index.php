@@ -27,11 +27,8 @@
             ?>
         </h3>
         <div class="tagBtnGroup">
-            <a class="btn btn-primary btn-lg m-2 <?php if ($_SESSION['loginStat'] != "success") echo("hider"); ?>" href="./?action=new_review
-            " role="button">我要寫評論</a>
-            <a class="btn btn-success btn-lg m-2 js-scroll-trigger" href="#reviews" role="button">
-                <?php if ($_SESSION['loginStat'] != "success") {echo("讓我看看！");} else {echo("我看看就好");} ?>
-            </a>
+            <a class="btn btn-primary btn-lg m-2" href="./?action=new_review" role="button">我要寫評論</a>
+            <a class="btn btn-light btn-lg m-2 js-scroll-trigger" href="#reviews" role="button">我看看就好</a>
         </div>
     </div>
     <div class="overlay"></div>
@@ -42,11 +39,7 @@
     <div class="container text-center">
         <h2 class="mb-3">
             所有評論
-            <?php
-                if ($course_id != "") {
-                    echo(" - " . $course_name);
-                }
-            ?>
+            
         </h2>
         <?php include("review_wrapper.php"); ?> 
         

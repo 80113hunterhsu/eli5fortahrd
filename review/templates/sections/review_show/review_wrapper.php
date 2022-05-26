@@ -26,6 +26,20 @@
             }
         ?>
     </div>
+    <?php
+        $course_list = array(
+            "MAU0180" => "calculus", 
+            "CSU0001" => "computer_programming", 
+            "ITU0162" => "engineering_design", 
+            "ITU0004" => "graphics", 
+            "ITU1028" => "internet_introduction", 
+            "SELF0001" => "laser_cut"
+        );
+        if ($course_id != "") {
+            $course_title = $course_list[$course_id];
+            echo("<div class='m-3'><a class='btn btn-success h4' href='../subject/?title=$course_title'>前往課程</a></div>");
+        }
+    ?>
 </div>
 
 <div id="reviews_wrapper" class="row justify-content-center">

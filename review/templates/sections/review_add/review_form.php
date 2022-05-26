@@ -31,7 +31,7 @@
     </div>
 
     <div class="form-group">
-        <textarea class="form-control" id="review_comment" name="review_comment" size="400" rows="8" placeholder="課程評論（400字內）"></textarea>
+        <textarea class="form-control" id="review_comment" name="review_comment" size="400" rows="8" placeholder="課程評論（400字內，選填）"></textarea>
     </div>
     <input class="btn btn-success btn-lg" type="submit" value="送出評論">
 </form>

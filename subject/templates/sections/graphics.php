@@ -9,6 +9,7 @@
         <h1 class="mb-1">圖學</h1>
         <h3 class="mb-5">
             <em>這裡沒有塗鴉，只有真理！</em>
+			<?php include("./templates/course_score.php"); ?>
         </h3>
         <div class="tagBtnGroup">
             <a class="btn btn-primary btn-xl js-scroll-trigger" href="#GraphicsTutorial">

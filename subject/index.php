@@ -1,5 +1,7 @@
+<!DOCTYPE html>
 <?php
 	session_start();
+	include("../database/serverConn.php");
 
     $title = $_GET['title'];
     $title_list = array(
@@ -10,8 +12,19 @@
         "internet_introduction" => "網際網路概論", 
         "laser_cut" => "雷射切割"
     );
+	$course_id_list = array(
+		"calculus" => "MAU0180", 
+        "computer_programming" => "CSU0001", 
+        "engineering_design" => "ITU0162", 
+        "graphics" => "ITU0004", 
+        "internet_introduction" => "ITU1028", 
+        "laser_cut" => "SELF0001"
+	);
+	$course_id = $course_id_list[$title];
+	$cmd_getCourseScore = "SELECT course_score FROM course WHERE course_id = '$course_id'";
+	$getCourseScore = mysqli_fetch_assoc(mysqli_query($db, $cmd_getCourseScore));
+	$course_score = $getCourseScore['course_score'];
 ?>
-<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">

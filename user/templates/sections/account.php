@@ -27,7 +27,8 @@
         ?>
     </h3>
     <div class="tagBtnGroup">
-        <a class="btn btn-primary btn-lg m-2" href="?action=account_manage" role="button">帳號資料修改</a>
+        <a class="btn btn-primary btn-lg m-2" href="../review/?action=new_review" role="button">寫評論</a>
+        <a class="btn btn-danger btn-lg m-2" href="?action=account_manage" role="button">修改基本資料</a>
         <a class="btn btn-danger btn-lg m-2" href="?action=pwd_modify" role="button">修改密碼</a>
         <a class="btn btn-success btn-lg m-2" href="?action=logout" role="button">登出</a>
     </div>

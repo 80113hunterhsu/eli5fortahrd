@@ -9,6 +9,7 @@
         <h1 class="mb-1">雷射切割</h1>
         <h3 class="mb-5">
             <em>喜歡動手動腳？來試試手感吧！</em>
+			<?php include("./templates/course_score.php"); ?>
         </h3>
         <div class="tagBtnGroup">
             <a class="btn btn-primary btn-xl js-scroll-trigger" href="#vidTop" onClick="tagger(1)">

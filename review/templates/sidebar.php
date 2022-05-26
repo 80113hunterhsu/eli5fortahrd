@@ -46,6 +46,7 @@
 
         <hr>
         <!--------------------------------->
+        <li class="sidebar-nav-item"> <a class="js-scroll-trigger" href="./">課程評論</a> </li>
         <li class="sidebar-nav-item"> <a class="js-scroll-trigger" href="https://forms.gle/tN4t4k7mt91NMgQ4A" target="_blank">懶人包主題提供</a> </li>
         <li class="sidebar-nav-item"> <a class="js-scroll-trigger" href="https://forms.gle/oXptZdPXLTaC2wiN7" target="_blank">意見回饋</a> </li>
 

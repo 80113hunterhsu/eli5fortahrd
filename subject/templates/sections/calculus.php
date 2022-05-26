@@ -9,6 +9,7 @@
 		<h1 class="mb-1">微積分</h1>
 		<h3 class="mb-5">
 			<em>微積分變危機了？沒關係，我也是。</em>
+			<?php include("./templates/course_score.php"); ?>
 		</h3>
 		<div class="tagBtnGroup">
 			<a class="btn btn-primary btn-xl js-scroll-trigger" href="#downloads">H...Help...</a>

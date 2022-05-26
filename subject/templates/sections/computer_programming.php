@@ -9,6 +9,7 @@
 		<h1 class="mb-1">程式設計</h1>
 		<h3 class="mb-5">
 			<em>雙主修資工的你，該看一下吧</em>
+			<?php include("./templates/course_score.php"); ?>
 		</h3>
 		<div class="tagBtnGroup">
 			<a class="btn btn-primary btn-xl js-scroll-trigger" href="#links">課程常用網頁連結</a>

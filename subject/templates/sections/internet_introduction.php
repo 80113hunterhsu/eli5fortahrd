@@ -9,6 +9,7 @@
 		<h1 class="mb-1">網際網路概論</h1>
 		<h3 class="mb-5">
 			<em>看課本想睡覺？那來看看這裡！</em>
+			<?php include("./templates/course_score.php"); ?>
 		</h3>
 		<div class="tagBtnGroup">
 			<a class="btn btn-primary btn-xl js-scroll-trigger" href="#unitPresentation">我叫你看！</a>

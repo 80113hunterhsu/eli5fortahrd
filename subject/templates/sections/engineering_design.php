@@ -9,6 +9,7 @@
         <h1 class="mb-1">工程設計</h1>
         <h3 class="mb-5">
             <em>做就對了，想那麼多幹什麼？</em>
+			<?php include("./templates/course_score.php"); ?>
         </h3>
         <div class="tagBtnGroup">
             <a class="btn btn-primary btn-xl js-scroll-trigger" href="#vidTop">教學影片</a>
