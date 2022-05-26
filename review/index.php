@@ -80,7 +80,7 @@
     <!-- Call to Action -->
     <section class="content-section bg-primary text-white" id="reviews">
         <div class="container text-center">
-            <h2 class="mb-5">
+            <h2 class="mb-3">
                 所有評論
             </h2>
             <?php include("./templates/review_wrapper.php"); ?> 
