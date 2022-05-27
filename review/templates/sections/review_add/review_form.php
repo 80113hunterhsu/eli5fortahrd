@@ -1,4 +1,4 @@
-<!-- register -->
+<!-- new review -->
 <?php
     $cmd_loadCourses = "SELECT * FROM course";
     $loadCourses = mysqli_query($db, $cmd_loadCourses);

@@ -14,12 +14,11 @@
 
     if ($reviewDelete) {
         $_SESSION['review_deleted'] = "success";
-        header("Location: ../../../?course=$course_id#reviews");
     }
     else {
         $_SESSION['review_deleted'] = "failed";
-        header("Location: ../../../?course=$course_id#reviews");
     }
+    header("Location: ../../../?course=$course_id#reviews");
 
     mysqli_close($db);
 ?>

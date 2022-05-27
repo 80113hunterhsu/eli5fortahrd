@@ -92,12 +92,15 @@
 	<?php include("./templates/sidebar.php"); ?>
 	
 	<?php
-        if ($action == "show") {
-            include("./templates/sections/review_show/index.php"); 
-        }
-        else if ($action == "new_review") {
-            include("./templates/sections/review_add/index.php"); 
-        }
+    if ($action == "show") {
+      include("./templates/sections/review_show/index.php"); 
+    }
+    else if ($action == "new_review") {
+      include("./templates/sections/review_add/index.php"); 
+    }
+    else if ($action == "modify_review") {
+      include("./templates/sections/review_modify/index.php"); 
+    }
     ?>
     
 	<!-- Footer -->

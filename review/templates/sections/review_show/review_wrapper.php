@@ -43,6 +43,13 @@
 </div>
 
 <div id="reviews_wrapper" class="row justify-content-center">
+    <script>
+        function confirmDelete(review_id) {
+            if (confirm('確定要刪除這個評論嗎？'/*  + review_id */)) {
+                window.location = "./templates/sections/review_show/delete_comment_action.php?review_id=" + review_id;
+            }
+        }
+    </script>
     <?php
         if ($course_id != "") {
             include("subject_wrapper.php"); 

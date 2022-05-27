@@ -18,7 +18,7 @@
                 }
             }
             else {
-                echo "<h4 class='text-dark m-0'>查無評論或評分！</h4>";
+                echo "<h4 class='text-dark m-0'>目前還沒有人評論～</h4>";
             }
             if ($review_count != 0) {
                 $course_score = $review_score_sum / (float)$review_count;
