@@ -118,6 +118,9 @@
 	
 	<!-- Custom scripts for this template --> 
 	<script defer src="../js/stylish-portfolio.min.js"></script>
+    
+    <!-- Custom Font Loader --> 
+    <link href="../css/customFonts.css" rel="stylesheet" type="text/css">
 </body>
 </html>
 	
