@@ -3,7 +3,7 @@
         <p class="text-center hider">
             網站設計＆維護：<a href="mailto:80113hunterhsu@gmail.com?subject=科技系懶人包">許恆齊</a>
         </p>
-        <hr>
+        <hr class="hider">
         <p class="" style="text-align: center;">
             科技系 系統分析與設計 專題<br>
             40871227H 陳致愷<br>
