@@ -1,7 +1,3 @@
----
-tags: eli5fortahrd
----
-
 # [科技系懶人包！](https://eli5fortahrd.tk)
 
 ## 懶人包在手，便知有沒有
