@@ -1,0 +1,4 @@
+@import url('/vendor/custom-fonts/jf-openhuninn-1.1.woff2');
+body, h1, h2, h3, h4, h5, h6, a, .btn {
+    font-family: "jf-openhuninn-1.1" !important;
+}

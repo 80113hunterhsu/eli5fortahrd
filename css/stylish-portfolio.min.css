@@ -69,7 +69,7 @@ h1,h2,h3,h4,h5,h6{
 	height:100vh;
 	padding-top:8rem;
 	padding-bottom:8rem;
-	background:linear-gradient(90deg,rgba(255,255,255,.1) 0,rgba(255,255,255,.1) 100%),url(../img/bg-masthead.jpg);
+	background:linear-gradient(90deg,rgba(255,255,255,.1) 0,rgba(255,255,255,.1) 100%),url(../img/bg-masthead.webp);
 	background-position:center center;
 	background-repeat:no-repeat;
 	background-size:cover;

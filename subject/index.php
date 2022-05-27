@@ -46,11 +46,11 @@
 	<link href="../css/customDefined.css" rel="stylesheet">
     
     <!-- Custom JS-->
-    <script src="../js/tagSwitcher.js"></script>
-    <script src="../js/subMenu.js"></script>
+    <script defer src="../js/tagSwitcher.js"></script>
+    <script defer src="../js/subMenu.js"></script>
 	
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HP1QM4Q74D"></script>
+    <script defer async src="https://www.googletagmanager.com/gtag/js?id=G-HP1QM4Q74D"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -99,14 +99,17 @@
 	<a class="scroll-to-top rounded js-scroll-trigger" href="#page-top"> <i class="fas fa-angle-up"></i> </a> 
 	
 	<!-- Bootstrap core JavaScript --> 
-	<script src="../vendor/jquery/jquery.min.js"></script> 
-	<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
+	<script defer src="../vendor/jquery/jquery.min.js"></script> 
+	<script defer src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
 	
 	<!-- Plugin JavaScript --> 
-	<script src="../vendor/jquery-easing/jquery.easing.min.js"></script> 
+	<script defer src="../vendor/jquery-easing/jquery.easing.min.js"></script> 
 	
 	<!-- Custom scripts for this template --> 
-	<script src="../js/stylish-portfolio.min.js"></script>
+	<script defer src="../js/stylish-portfolio.min.js"></script>
+    
+	<!-- Custom Font Loader --> 
+	<link href="css/customFonts.css" rel="stylesheet" type="text/css">
 </body>
 </html>
 	
