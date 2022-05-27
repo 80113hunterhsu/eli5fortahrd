@@ -14,7 +14,7 @@
     $addReview = mysqli_query($db, $cmd_addReview);
     if ($addReview) {
         $_SESSION['new_review'] = "success";
-        header("Location: ../../../?course=$course_id#reviews");
+        header("Location: ../../../?course=$course_id");
     }
 
     mysqli_close($db);

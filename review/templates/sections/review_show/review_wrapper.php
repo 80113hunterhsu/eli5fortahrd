@@ -3,12 +3,13 @@
     $loadCourses = mysqli_query($db, $cmd_loadCourses);
 ?>
 
-<div class="dropdown mb-5">
-    <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+<div class="dropdown m-4 tagBtnGroup">
+    <a class="btn btn-primary btn-lg" href="./?action=new_review" role="button">我要寫評論</a>
+    <a class="btn btn-light btn-lg dropdown-toggle" href="#" id="dropdownMenuButton" data-toggle="dropdown">
         <?php 
             echo "<h5 class='d-inline'>$course_name</h5>";
         ?>
-    </button>
+    </a>
     <div class="dropdown-menu">
         <?php
             while ($row = mysqli_fetch_assoc($loadCourses)) {
@@ -22,7 +23,7 @@
                 else {
                     $active = "";
                 }
-                echo("<a class='dropdown-item$active' href='?course=$row_course_id#reviews'>$row_course_name</a>");
+                echo("<a class='dropdown-item$active' href='?course=$row_course_id'>$row_course_name</a>");
             }
         ?>
     </div>
@@ -37,7 +38,7 @@
         );
         if ($course_id != "") {
             $course_title = $course_list[$course_id];
-            echo("<div class='m-3'><a class='btn btn-success h4' href='../subject/?title=$course_title'>前往課程</a></div>");
+            echo("<a class='btn btn-success btn-lg' href='../subject/?title=$course_title'><h5 class='d-inline'>前往課程</h5></a>");
         }
     ?>
 </div>
@@ -46,7 +47,7 @@
     <script>
         function confirmDelete(review_id) {
             if (confirm('確定要刪除這個評論嗎？'/*  + review_id */)) {
-                window.location = "./templates/sections/review_show/delete_comment_action.php?review_id=" + review_id;
+                window.location = "./templates/sections/review_modify/delete_comment_action.php?review_id=" + review_id;
             }
         }
     </script>

@@ -18,7 +18,7 @@
     else {
         $_SESSION['review_deleted'] = "failed";
     }
-    header("Location: ../../../?course=$course_id#reviews");
+    header("Location: ../../../?course=$course_id");
 
     mysqli_close($db);
 ?>
