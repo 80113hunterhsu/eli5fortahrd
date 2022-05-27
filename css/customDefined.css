@@ -28,6 +28,10 @@ header {
     opacity: 0.85 !important;
     text-shadow: none !important;
 }
+footer.footer {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important
+}
 .form-group input, .form-group select, .form-group textarea {
     font-size: 1.3rem;
 }
