@@ -1,8 +1,8 @@
 <?php
     $servername = "localhost";
-    $username = "test_user";
-    $password = "test_password";
-    $dbname = "testDB";
+    $username = "eli5fortahrd";
+    $password = "eli5fortahrd";
+    $dbname = "eli5fortahrd";
 
     $db = mysqli_connect($servername, $username, $password, $dbname);
     mysqli_set_charset($db, 'utf8mb4');
